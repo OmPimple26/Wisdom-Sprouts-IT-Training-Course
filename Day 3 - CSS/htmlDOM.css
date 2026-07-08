@@ -1,0 +1,79 @@
+/* Element selectors */
+/* h1{
+    background-color: red;
+    color: aliceblue;
+    text-align: center;
+
+    color: rgb(3, 134, 249);
+} */
+
+/* p{
+    background-color: bisque;
+} */
+
+
+/* Class selectors */
+/* #main{
+    background-color: blue;
+} */
+
+
+/* Id selectors */
+/* .main{
+    background-color: tomato;
+} */
+
+
+/* Pseudo selectors */
+/* h1:hover{
+    background-color: aliceblue;
+    color: black;
+    text-align: center;
+    text-decoration: underline;
+} */
+
+/* p:hover{
+    background-color: aqua;
+    text-transform: lowercase;
+    text-align: center;
+} */
+
+/* div:hover{
+    background-color: black;
+    color: aliceblue;
+} */
+
+/* section:hover{
+    background-color: blanchedalmond;
+    color: blueviolet;
+} */
+
+
+/* Multiple selectors */
+/* h2,p,.wow{
+    background-color: purple;
+    background-color: rgb(55, 100, 200);
+    background-color: #fa8231;
+    color: aliceblue;
+    font-size: 2rem;
+    padding: 2rem;
+    text-align: center;
+} */
+
+
+/* Specificity */
+h1{
+    background-color: yellow;
+}
+
+.are{
+    background-color: purple;
+}
+
+.are{
+    background-color: purple !important;
+}
+
+#we{
+    background-color: greenyellow;
+}
