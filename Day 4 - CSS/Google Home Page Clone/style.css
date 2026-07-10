@@ -1,0 +1,125 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    /* background: linear-gradient(pink,violet, rgb(236, 61, 236)); */
+    background: #22242A;
+}
+
+header {
+    padding: 20px;
+}
+
+nav {
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+}
+
+main {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    font-size: 70px;
+    color: #4285F4;
+    margin-bottom: 25px;
+}
+
+input {
+    margin-top: 20px;
+    width: 700px;
+    max-width: 90%;
+    padding: 15px 20px;
+    color: white;
+    background-color: #4D5156;
+    border: 1px solid #3F4247;
+    border-radius: 25px;
+    font-size: 16px;
+    outline: none;
+}
+
+input:hover,
+input:focus {
+    box-shadow: 0 0 5px rgba(0,0,0,0.2);
+}
+
+.buttons {
+    margin-top: 25px;
+}
+
+button {
+    padding: 10px 15px;
+    margin: 5px;
+    border: 1px solid #2B2D31;
+    background: #303134;
+    color: white;
+    cursor: pointer;
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+button:hover {
+    border: 1px solid #e8eaed;
+}
+
+h6 {
+    margin-top: 45px;
+    color: #5B98CD;
+    font-size: smaller;
+}
+
+h6 span{
+    color: white;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    background: #16171A;
+    padding: 25px 15px;
+    color: white;
+    font-weight: bold;
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+}
+
+footer p {
+    border-bottom: 1px solid white;
+    margin-bottom: 10px;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+}
+
+footer .footer-links {
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    gap: 150px;
+}
+
+footer .footer-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+}
