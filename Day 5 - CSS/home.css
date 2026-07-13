@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Yuyu+Short&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    width:100vw;
+    /* background: linear-gradient(to top right, red,blue,white,orange,purple,pink); */
+    /* background: radial-gradient(red 20%,blue,white,orange,purple,pink); */
+    /* background: conic-gradient(red,blue,white,orange,purple,pink); */
+}
+
+h2{
+    /* font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: lighter;
+    text-align: center; */
+
+    font-family: "Yuyu Short", sans-serif;
+    font-size: 4rem;
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
+    text-shadow: 3px 0px 5px black;
+}
+
+p{
+    /* font-weight: 200;
+    font-style: italic;
+    text-align: center; */
+
+    height: 250px;
+    width: 300px;
+    border: 2px solid black;
+    margin: auto;
+    margin-top: 4rem;
+    background-color: plum;
+    box-shadow: 0px 0px 10px -1px rgb(234, 8, 8);
+}
