@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .nice{
+            height: 600px;
+            width: 90%;
+            border: 2px solid black;
+            margin: auto;
+            position: relative;
+        }
+
+        .box{
+            height: 70px;
+            width: 70px;
+            border: 2px solid black;
+            background-color: yellowgreen;
+            font-size: 4rem;
+            position: absolute;
+        }
+
+        #one{
+            z-index: 1;
+            top: 40px;
+            left: 40px;
+        }
+
+        #two{
+            z-index: 2;
+            top: 80px;
+            left: 80px;
+        }
+
+        #three{
+            z-index: 3;
+            top: 120px;
+            left: 120px;
+        }
+
+        #four{
+            z-index: 4;
+            top: 160px;
+            left: 160px;
+        }
+    </style>
+</head>
+<body>
+    <div class="nice">
+
+    <div class="box" id="one">1</div>
+    <div class="box" id="two">2</div>
+    <div class="box" id="three">3</div>
+    <div class="box" id="four">4</div>
+
+    </div>
+</body>
+</html>
