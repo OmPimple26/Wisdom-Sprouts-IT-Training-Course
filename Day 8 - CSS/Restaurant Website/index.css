@@ -54,3 +54,169 @@ nav a:hover{
     /* background-color: yellow; */
     width: 100%;
 }
+
+#best_selling{
+    height: max-content;
+    width: 90%;
+    padding: 1rem 0;
+    margin: auto;
+}
+
+#best_selling .card{
+    height: 22rem;
+    width: 16rem;
+    /* margin: auto; */
+    margin-top: 20px;
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0px 0px 5px 0px black;
+    /* background-color: red; */
+}
+
+#best_selling .card .image{
+    height: 16rem;
+    /* border: 2px solid black; */
+    position: relative;
+    padding: 4px;
+}
+
+#best_selling .card .image p{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 2rem;
+    color: red;
+    text-shadow: 3px -1px 1px black;
+}
+
+#best_selling .card .image img{
+    height: 100%;
+    width: 100%;
+    border-radius: 6px;
+}
+
+#best_selling .card .food-info{
+    height: 6rem;
+    /* border: 2px solid black; */
+    padding: 0.4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#best_selling .card .food-info button{
+    height: 2.6rem;
+    width: 15rem;
+    background-color: inherit;
+    border: 1px solid black;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+#best_selling .card .food-info button:hover{
+    background-color: rgb(225, 233, 240);
+}
+
+#best_selling h2{
+    text-align: center;
+    padding: 1rem 0;
+    text-decoration: underline;
+    font-style: italic;
+    font-family: cursive;
+    color: rgb(245, 145, 145);
+    text-shadow: 1px 1px 1px black;
+}
+
+
+/* ===================== BEST SELLING ===================== */
+
+/* #best_selling{
+    padding:70px 80px;
+    background:#f8f8f8;
+}
+
+#best_selling h2{
+    text-align:center;
+    font-size:42px;
+    color:#ff5722;
+    margin-bottom:50px;
+}
+
+.cards{
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    flex-wrap:wrap;
+}
+
+.card{
+    width:300px;
+    background:white;
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:0 12px 25px rgba(0,0,0,.2);
+    transition:0.4s;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 20px 40px rgba(0,0,0,.25);
+}
+
+.image{
+    position:relative;
+    height:250px;
+    overflow:hidden;
+}
+
+.image img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    transition:0.5s;
+}
+
+.card:hover .image img{
+    transform:scale(1.08);
+}
+
+.image p{
+    position:absolute;
+    top:15px;
+    right:15px;
+    background:#ff5722;
+    color:white;
+    padding:8px 15px;
+    border-radius:25px;
+    font-size:18px;
+    font-weight:bold;
+}
+
+.food-info{
+    padding:20px;
+    text-align:center;
+}
+
+.food-info h4{
+    font-size:26px;
+    color:#333;
+    margin-bottom:15px;
+}
+
+.food-info button{
+    padding:12px 30px;
+    border:none;
+    border-radius:30px;
+    background:linear-gradient(45deg,#ff5722,#ff9800);
+    color:white;
+    font-size:16px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.food-info button:hover{
+    transform:scale(1.05);
+    background:linear-gradient(45deg,#e64a19,#ff6f00);
+} */
