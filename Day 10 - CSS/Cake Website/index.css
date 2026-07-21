@@ -1,0 +1,90 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    /* background-color: black; */
+    background: url(https://www.thedailymeal.com/img/gallery/the-relatively-recent-history-of-chocolate-lava-cake/intro-1710470105.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+header{
+    background-color: black;
+    color: aliceblue;
+    font-family: cursive;
+    font-style: italic;
+    font-size: 1.2rem;
+    text-decoration: underline;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    /* display: none;
+    visibility: hidden; */
+}
+
+
+h2{
+    text-align: center;
+    margin-top: 0.6rem;
+    font-family: "Jersey 10 Charted", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 4rem;
+    color: red;
+}
+
+#wrapper{
+    height: max-content;
+    width: 1024px;
+    background-color: blueviolet;
+    margin-top: 20px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    padding: 1rem;
+}
+
+#wrapper .card{
+    height: 22rem;
+    width: 18rem;
+    border: 2px solid whitesmoke;
+    position: relative;
+    transition: transform 0.6s ease-in-out;
+    cursor: pointer;
+    filter: grayscale(100);
+}
+
+#wrapper .card:hover{
+    transform: scale(1.1);
+    filter: grayscale(0);
+}
+
+#wrapper .card figure{
+    height: 100%;
+    width: 100%;
+}
+
+#wrapper .card figure img{
+    height: 100%;
+    width: 100%;
+}
+
+#wrapper .card figure figcaption{
+    position: absolute;
+    bottom: 0;
+    color: aliceblue;
+    background-color: rgb(247, 72, 72);
+    width: 100%;
+    text-align: center;
+    padding: 7px;
+    font-size: large;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bolder;
+    font-style: italic;
+    border: 2px solid black;
+}
