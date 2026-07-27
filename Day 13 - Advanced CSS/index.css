@@ -1,0 +1,95 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#wrapper{
+    /* height: max-content; */
+    height: 800px;
+    width: 90%;
+    border: 2px solid black;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    padding: 1rem 0;
+}
+
+#one{
+    order: 6;
+    /* flex-basis: 50px; */
+    flex-shrink: 4;
+}
+
+#two{
+    order: 4;
+    /* flex-grow: 4; */
+}
+
+#three{
+    order: 2;
+    /* flex-basis: 200px; */
+    align-self: flex-end;
+}
+
+/* #four{
+    order: 1;
+    flex-grow: 2;
+}
+
+#five{
+    order: 3;
+}
+
+#six{
+    order: 5;
+} */
+
+#wrapper .card{
+    height: 300px;
+    width: 300px;
+    border: 2px solid black;
+    position: relative;
+}
+
+#wrapper .card h1{
+    position: absolute;
+    left: 10px;
+    top: 10px;
+}
+
+#wrapper .card img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+h2{
+    text-align: center;
+    margin: 1rem 0;
+    padding: 0.6rem 0;
+    font-size: 2rem;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 400;
+    font-style: normal;
+    position: relative;
+    /* background-color: red; */
+}
+
+h2::after{
+    content: "";
+    display: inline-block;
+    position: absolute;
+    bottom: 0;
+    left: 565px;
+    height: 0.4rem;
+    background: linear-gradient(to right, red, orange, blue, green, purple, pink);
+    width: 0;
+    transition: width 0.2s ease-in;
+}
+
+h2:hover::after{
+    width: 400px;
+}
