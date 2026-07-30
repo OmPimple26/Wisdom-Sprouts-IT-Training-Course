@@ -4,9 +4,9 @@
     box-sizing: border-box;
 }
 
-body{
+/* body{
     background-color: plum;
-}
+} */
 
 .heading{
     text-align: center;
@@ -27,7 +27,7 @@ body{
 
 .wrapper{
     width: 1090px;
-    border: 2px solid black;
+    /* border: 2px solid black; */
     margin: auto;
 }
 
@@ -49,7 +49,8 @@ body{
 .wrapper ul li h2{
     /* margin: 0.6rem 0; */
     margin-bottom: 0.6rem;
-    color: aliceblue;
+    /* color: aliceblue; */
+    color: plum;
     text-shadow: 1px 1px 1px black;
 }
 
@@ -61,4 +62,38 @@ body{
     border: 2px solid black;
     background: inherit;
     padding: 0.6rem;
+}
+
+@media screen and (max-width: 600px){
+    #wrapper{
+        height: 300px;
+        width: 70%;
+        background-color: yellowgreen;
+    }
+
+    h1{
+        font-size: 1.2rem;
+    }
+}
+
+@media screen and (max-width: 992px){
+    .wrapper{
+        width: 800px;
+    }
+
+    .wrapper ul{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media screen and (max-width: 768px){
+    .wrapper ul{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 576px){
+    .wrapper ul{
+        grid-template-columns: repeat(1, 1fr);
+    }
 }
