@@ -188,3 +188,48 @@ nav a:hover {
 .secondary:hover {
   background: rgba(255, 255, 255, 0.05);
 }
+
+/* ================== Stats ================== */
+
+.stats{
+    width:50%;
+    margin:70px auto 70px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    border-top:1px solid rgba(255,255,255,.08);
+    padding-top:40px;
+}
+
+.stat{
+    text-align:center;
+}
+
+.stat h2{
+    font-size:35px;
+    font-weight:800;
+    color:#fff;
+}
+
+.stat p{
+    margin-top:12px;
+    font-size:16px;
+    color:#8c93a6;
+}
+
+/* ================= Dashboard Image ================= */
+
+.dashboard{
+    width:100%;
+    display:flex;
+    justify-content:center;
+    margin-bottom:120px;
+}
+
+.dashboard img{
+    width:72%;
+    max-width:1300px;
+    border-radius:24px;
+    display:block;
+    box-shadow: 0 20px 60px rgba(0,0,0,.35);
+}
