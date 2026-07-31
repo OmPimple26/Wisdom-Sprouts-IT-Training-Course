@@ -233,3 +233,89 @@ nav a:hover {
     display:block;
     box-shadow: 0 20px 60px rgba(0,0,0,.35);
 }
+
+/* ================= FEATURES ================= */
+
+.features{
+    width:100%;
+    padding:120px 2%;
+    background:#151c2b;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:70px;
+}
+
+.badge{
+    display:inline-block;
+    padding:5px 10px;
+    border-radius:30px;
+    background:#2E1B5E;
+    color:#c7b5ff;
+    font-size:15px;
+    font-weight:600;
+    margin-bottom:20px;
+}
+
+.section-title h2{
+    font-size:35px;
+    color:#fff;
+    font-weight:800;
+    margin-bottom:25px;
+}
+
+.section-title p{
+    font-size:18px;
+    color:#9ba3b3;
+}
+
+/* Cards */
+.feature-container{
+    display:flex;
+    justify-content:space-between;
+    gap:35px;
+    flex-wrap:wrap;
+}
+
+.feature-card{
+    flex: 1;
+    min-width:422px;
+    background:#1F2937;
+    border-radius:22px;
+    padding:30px;
+    transition:0.4s;
+}
+
+/* .feature-card:hover{
+    transform:translateY(-10px);
+    background:#2b3546;
+} */
+
+.icon{
+    width:50px;
+    height:50px;
+    background:#4a2b8d;
+    border-radius:12px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    margin-bottom:30px;
+}
+
+.icon i{
+    color:#b89cff;
+    font-size:22px;
+}
+
+.feature-card h3{
+    font-size:20px;
+    color:#fff;
+    margin-bottom:20px;
+}
+
+.feature-card p{
+    font-size:16px;
+    line-height:1.7;
+    color:#9ca3af;
+}
