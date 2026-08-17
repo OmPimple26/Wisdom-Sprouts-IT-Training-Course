@@ -1,0 +1,345 @@
+/* =========================================================
+   GENERAL
+========================================================= */
+
+body {
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  font-weight: 700;
+}
+
+p {
+  color: #8f8f8f;
+}
+
+/* =========================================================
+   TITLE / HERO
+========================================================= */
+
+#title {
+  background-color: #ff4c68;
+  color: white;
+}
+
+.container-fluid {
+  padding: 3% 15%;
+}
+
+/* =========================================================
+   NAVBAR
+========================================================= */
+
+.navbar {
+  padding: 0 0 4.5rem;
+}
+
+.navbar-brand {
+  font-family: "Ubuntu", sans-serif;
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.nav-item {
+  padding: 0 18px;
+}
+
+.nav-link {
+  font-size: 1.2rem;
+  font-family: "Montserrat", sans-serif;
+}
+
+/* =========================================================
+   HERO CONTENT
+========================================================= */
+
+.hero-content {
+  text-align: left;
+}
+
+.hero-content h1 {
+  font-size: 3.5rem;
+  line-height: 1.5;
+  font-weight: 900;
+  margin-bottom: 30px;
+}
+
+.download-button {
+  margin: 5% 3% 5% 0;
+}
+
+/* =========================================================
+   PHONE IMAGE
+========================================================= */
+
+.image-container {
+  position: relative;
+}
+
+.title-image {
+  width: 60%;
+  transform: rotate(25deg);
+  position: absolute;
+  right: 15%;
+}
+
+/* =========================================================
+   FEATURES
+========================================================= */
+
+#features {
+  background-color: white;
+  position: relative;
+}
+
+.feature-box {
+  padding: 5%;
+}
+
+.feature-box h3 {
+  font-size: 1.5rem;
+}
+
+.feature-box p {
+  color: black;
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+.feature-icon {
+  color: #ef8172;
+  font-size: 4rem;
+  margin-bottom: 1rem;
+  transition: 0.3s;
+}
+
+.feature-icon:hover {
+  color: #ff4c68;
+}
+
+/* =========================================================
+   TESTIMONIALS
+========================================================= */
+
+#testimonials {
+  background-color: #ef8172;
+  color: black;
+}
+
+.testimonial-text {
+  font-size: 2.5rem;
+  line-height: 1.5;
+  font-weight: 700;
+}
+
+.testimonial-image {
+  width: 10%;
+  border-radius: 100%;
+  margin: 20px;
+}
+
+#testimonials em{
+  color: white;
+}
+
+/* =========================================================
+   CAROUSEL
+========================================================= */
+
+.carousel-item {
+  padding: 7% 15%;
+}
+
+/* =========================================================
+   PRESS
+========================================================= */
+
+#press {
+  background-color: #ef8172;
+  padding-bottom: 3%;
+}
+
+.press-logo {
+  width: 15%;
+  margin: 20px 20px 50px;
+}
+
+/* =========================================================
+   PRICING
+========================================================= */
+
+#pricing {
+  padding: 100px;
+}
+
+#pricing h2 {
+  font-size: 2.5rem;
+}
+
+.pricing-row {
+  margin-top: 50px;
+}
+
+.pricing-column {
+  padding: 3% 2%;
+}
+
+.card {
+  height: 100%;
+}
+
+.card-header h3 {
+  font-size: 1.5rem;
+}
+
+.card-body h2 {
+  font-size: 2.5rem;
+  margin-bottom: 25px;
+}
+
+.card-body p {
+  margin: 15px 0;
+}
+
+/* =========================================================
+   CTA
+========================================================= */
+
+#cta {
+  background-color: #ff4c68;
+  color: white;
+  padding: 7% 15%;
+}
+
+#cta h3 {
+  font-size: 3rem;
+  line-height: 1.5;
+  font-weight: 900;
+}
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+#footer {
+  background-color: white;
+  padding: 7% 15%;
+}
+
+.social-icon {
+  margin: 20px 10px;
+  font-size: 1.3rem;
+  cursor: pointer;
+}
+
+.social-icon:hover {
+  color: #ff4c68;
+}
+
+/* =========================================================
+   RESPONSIVE DESIGN
+========================================================= */
+
+/* @media (max-width: 1028px) {
+  .hero-content {
+    text-align: center;
+  }
+
+  .hero-content h1 {
+    font-size: 3rem;
+  }
+
+  .title-image {
+    position: static;
+    transform: rotate(0);
+    width: 50%;
+  }
+
+  .image-container {
+    margin-top: 30px;
+  }
+} */
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+/* @media (max-width: 768px) {
+  .container-fluid {
+    padding: 7% 8%;
+  }
+
+  .hero-content h1 {
+    font-size: 2.5rem;
+  }
+
+  .testimonial-text {
+    font-size: 2rem;
+  }
+
+  #pricing {
+    padding: 60px 20px;
+  }
+
+  #cta h3 {
+    font-size: 2.3rem;
+  }
+
+  .press-logo {
+    width: 20%;
+  }
+} */
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+/* @media (max-width: 576px) {
+  .navbar-brand {
+    font-size: 2rem;
+  }
+
+  .hero-content h1 {
+    font-size: 2.2rem;
+  }
+
+  .download-button {
+    width: 100%;
+    margin: 8px 0;
+  }
+
+  .title-image {
+    width: 60%;
+  }
+
+  .feature-icon {
+    font-size: 3rem;
+  }
+
+  .testimonial-text {
+    font-size: 1.5rem;
+  }
+
+  .testimonial-image {
+    width: 20%;
+  }
+
+  .press-logo {
+    width: 30%;
+    margin: 15px;
+  }
+
+  #pricing {
+    padding: 50px 15px;
+  }
+
+  #cta {
+    padding: 15% 8%;
+  }
+
+  #cta h3 {
+    font-size: 2rem;
+  }
+} */
