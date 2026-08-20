@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment</title>
+</head>
+<body>
+    <h1>Answers</h1>
+    <script>
+        // 1. == comapres value with type coercion, === compares value and type strictly, while Object.is() is used to compare two values for equality, including special cases like NaN and -0.
+
+        // 2. ?? returns the right value only for null/undefined, while || returns true if any of the condition is true.
+
+        // 3. Output of 0 || 10 because 0 is falsy, so it returns the right value which is 10. Output of 0 ?? 10 is 0 because ?? only checks for null/undefined, and 0 is neither.
+
+        // 4. let x = 5; let y = x++ + ++x + x; // Output is 5 + 7 + 7 = 19. Explanation: x++ returns 5 and then increments x to 6, ++x increments x to 7 and returns 7, and the last x is now 7.
+
+        // 5. true && false returns false while true && !false returns true therefore false || true returns true.
+
+        // 6. `[] == false` is `true` due to type coercion (`[] → "" → 0`), while `[] === false` is `false` because object and boolean have different types.
+
+        // 7. null == undefined // true, 
+        //    null === undefined // false, 
+        //    null == 0 // false, 
+        //    null >= 0 // true
+
+        // 8. obj?.property safely returns undefined only if obj is nullish, while obj && obj.property returns the falsy obj value itself if obj is falsy.
+
+        // 9. obj.method?.() safely calls an existing method, obj?.method() safely checks obj but errors if method is missing, and obj?.method?.() safely checks both.
+
+        // 10. Nested ternary operators are right-associative: a ? b : c ? d : e means a ? b : (c ? d : e).
+
+        // 11. `typeof null` returns "object" due to a historical bug in JavaScript, while `typeof undefined` returns "undefined".
+
+        // 12. delete obj?.property safely returns true if obj is nullish; otherwise, it attempts to delete the property.
+
+        // 13. &, |, ^, and ~ are bitwise AND, OR, XOR, and NOT operators that convert numbers to 32-bit signed integers.
+
+        // 14. >> is signed right shift (preserves the sign), while >>> is unsigned right shift (fills with 0 from the left).
+
+        // 15. 2 ** 3 ** 2 → 512 because ** is right-associative: 2 ** (3 ** 2), while (2 ** 3) ** 2 → 64.
+
+        // 16. -2 ** 2 is invalid because unary - cannot directly precede exponentiation, so use -(2 ** 2).
+
+        // 17. +=, -=, *=, and **= perform arithmetic assignment, while &&=, ||=, and ??= assign conditionally based on truthiness or nullishness.
+
+        // 18. ?? cannot be directly mixed with || or && because JavaScript requires parentheses to avoid ambiguous expressions.
+
+        // 19. "10" + 5 * 2 + 3
+        //     "10" + 10 + 3
+        //     "1010" + 3
+        //     "10103"
+
+        // 20. 1 < 2 < 3 → true, while 3 > 2 > 1 → false, because comparisons evaluate left-to-right and true/false are converted to 1/0 for the next comparison.
+    </script>
+</body>
+</html>
