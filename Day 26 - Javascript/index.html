@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operators</title>
+</head>
+<body>
+    <h1>Operators and Scope</h1>
+    <script>
+        // 1. Arithmetic Operators -
+        // let a = 2;
+        // let b = 4;
+        // let result = a+b;
+        // console.log(result);
+        // console.log(a+b);
+        // console.log(a-b);
+        // console.log(a*b);
+        // console.log(a/b);
+        // console.log(a%b);
+
+        // 2. Increment and Decrement Operators - 
+        // let c = 24;
+        // c++;
+        // c++;
+        // c++;
+        // c--;
+        // c--;
+
+        // console.log(c);
+
+        // 3. Assignment Operators -
+        // let d = 10;
+        // let e = d;
+        // console.log(e);
+
+        // 4. Comaparison Operator -
+        // var f = 24;
+        // var g = 26;
+        // console.log(f==g);
+        // console.log(f>g);
+        // console.log(f<g);
+        // console.log(f>=g);
+        // console.log(f<=g);
+        // console.log(f!=g);
+
+        // console.log(2=="2");
+        // console.log(2==="2");
+        // console.log(2+"2");
+
+        // console.log("a"=="a");
+        // console.log("a"=="A");
+
+        // console.log("B".charCodeAt());
+
+        // console.log(4 != "4");
+        // console.log(4 !== "4");
+
+        // 5. Logical Operators -
+        // let h = 6;
+        // let i = 9;
+        // console.log(h==i && h!==i);
+        // console.log(h<i && h!==i);
+        // console.log(h==i && h!==i);
+        // console.log(h==i || h!==i);
+        // console.log(true);
+        // console.log(!true);
+
+        // 6. Nullish Coalescing Operator -
+        // let result = undefined ?? "Hello";
+        // console.log(result);
+
+        // 7. Ternary Operator -
+        // let ans = true ? "Yes" : "No";
+        // console.log(ans);
+
+        // let res = false ? "Yes" : "No";
+        // console.log(res);
+
+        // 8. Scope in JavaScript -
+        // let and const are block scoped, while var is function scoped.
+
+        {
+            let a = 10;
+            const b = 20;
+            var c = 40;
+
+            console.log(a); 
+            console.log(b); 
+            console.log(c);      
+        }
+
+        // var c = 60;
+        // console.log(c);
+
+        console.log(a); // It will give error because a is block scoped and cannot be accessed outside the block.
+        console.log(b); // It will give error because b is block scoped and cannot be accessed outside the block.
+        console.log(c); // It will print 40 because c is function scoped and can be accessed outside the block as well.
+
+    </script>
+</body>
+</html>
