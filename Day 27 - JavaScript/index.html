@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conditional Statements</title>
+</head>
+<body>
+    <h1>Conditional Statements</h1>
+    <script>
+        // 1. If-else statement-
+        // const color = "red";
+
+        // console.log(color=="red");
+
+        // if(true){
+        //     console.log("This is red colour");
+        // }else{
+        //     console.log("Colour is not red");
+        // }
+
+
+        // const age = prompt("Enter your age: ");
+
+        // if(age<25){
+        //     console.log("You are underage for marriage");
+        // }else if(age>=25 && age<=27){
+        //     console.log("You should get married fast...")
+        // }else if(age>=28 && age<=30){
+        //     console.log("You should get married super fast...")
+        // }else{
+        //     console.log("Please skip the marriage matrix");
+        // }
+
+
+        // const marks = prompt("Enter your marks: ");
+
+        // if(marks>=90){
+        //     console.log("A grade");
+        // }else if(marks>=80 && marks<90){
+        //     console.log("B grade")
+        // }else if(marks>=60 && marks<80){
+        //     console.log("C grade")
+        // }else if(marks>=35 && marks<60){
+        //     console.log("D grade")
+        // }else{
+        //     console.log("Fail");
+        // }
+
+
+        // 2. Switch-case statement-
+        // const color = prompt("Enter you color: ")
+
+        // switch(color.toLowerCase()){
+        //     case "red": 
+        //         console.log("This is red color");
+        //         break;
+
+        //     case "green": 
+        //         console.log("This is green color");
+        //         break; 
+                        
+        //     default: 
+        //         console.log("No colour here");
+        // }
+
+
+        const waterTemp = Number(prompt("Enter temperature of water: "));
+
+        switch(true){
+            case waterTemp>35: 
+                console.log("Hot Water");
+                break;
+
+            case waterTemp>25 && waterTemp<=35: 
+                console.log("Warm water");
+                break; 
+
+            case waterTemp == 20: 
+                console.log("Luke warm water");
+                break;
+
+            case waterTemp == 15: 
+                console.log("Cool water");
+                break;
+                        
+            default: 
+                console.log("Enter correct temperture");
+        }
+
+
+        // const color = prompt("Enter signal color: ")
+
+        // switch(color.toLowerCase()){
+        //     case "red": 
+        //         console.log("You should stop");
+        //         break;
+
+        //     case "yellow": 
+        //         console.log("You can start");
+        //         break; 
+
+        //     case "green": 
+        //         console.log("You can go");
+        //         break;
+                        
+        //     default: 
+        //         console.log("Please enter correct color");
+        // }
+
+    </script>
+</body>
+</html>
