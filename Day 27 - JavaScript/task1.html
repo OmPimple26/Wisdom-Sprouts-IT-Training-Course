@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* body{
+            background-color: #fff;
+            color: #000;
+        } */
+        .DarkTheme {
+            background-color: black;
+            color: white;
+        }
+        .lightTheme{
+            background-color: white;
+            color: black;
+        }
+        .showMSG{
+            /* display: block; */
+            overflow:visible;
+            visibility:visible;
+        }
+        .hideMSG{
+            /* display: none; */
+            overflow: hidden;
+            visibility: hidden;
+        }
+    </style>
+</head>
+<body class="lightTheme">
+    <h1 id="headingOne">Welcome Student</h1>
+    <button id="btnHeading">Change Heading</button>
+<script>
+    document.querySelector("#btnHeading").addEventListener("click", ()=>{
+            document.querySelector("#headingOne").textContent = "Welcome to JavascriptDOM"
+    })
+</script>
+<hr>
+    <p id="paraOne">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis eos minima, a necessitatibus, voluptatem totam est et harum itaque odio, dolore consequatur. Ratione recusandae veritatis odio vel dignissimos quam nisi. Hic, nihil commodi inventore aliquid fugiat maxime ipsam itaque quas omnis, nobis ab quaerat a odio? Atque ad id soluta.</p>
+        <button id="redBTN">RED</button>
+        <button id="greenBTN">GREEN</button>
+        <button id="blueBTN">BLUE</button>
+    
+    <script>
+        const paraOneELMT=document.querySelector("#paraOne")
+        document.querySelector("#redBTN").addEventListener("click",()=>{
+            paraOneELMT.style.color = "#f00"
+        })
+
+        document.querySelector("#greenBTN").addEventListener("click",()=>{
+            paraOneELMT.style.color = "#0f0"
+        })
+
+
+        document.querySelector("#blueBTN").addEventListener("click",()=>{
+            paraOneELMT.style.color = "#00f"
+        })
+    </script>
+    <hr>
+    <p id="paraTwo">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere, pariatur.</p>
+    <button onclick="showAndHide()">Show / Hide</button>
+    <script>
+        function showAndHide(){
+           const praTwoElmt = document.getElementById("paraTwo")
+           if(praTwoElmt.classList.contains("showMSG")) {
+            praTwoElmt.classList.remove("showMSG")
+            praTwoElmt.classList.add("hideMSG")
+           }else{
+            praTwoElmt.classList.add("showMSG")
+            praTwoElmt.classList.remove("hideMSG")
+           }
+            
+        }
+    </script>
+    <button onclick="changeTheme()">Change theme</button>
+    <script>
+        function changeTheme(){
+            // if(document.body.style.backgroundColor == "#000"){
+            //     console.log(document.body.style.backgroundColor)
+            //     document.body.style.backgroundColor = "#fff"
+            //     document.body.style.color = "#000"
+            // }else{
+            // document.body.style.backgroundColor = "#000"
+            // document.body.style.color = "#fff"
+            // }
+
+            if(document.body.classList.contains("lightTheme")){
+                document.body.classList.remove("lightTheme")
+                document.body.classList.add("DarkTheme")
+            }else{
+                document.body.classList.add("lightTheme")
+                document.body.classList.remove("DarkTheme")
+           
+            }
+        }
+    </script>
+    <hr>
+    <h1>Count : <span id="count"></span></h1>
+    <button id="increament">+</button>
+    <button id="reset">Reset</button>
+    <button id="decreament">-</button>
+    <script>
+        let count = 0
+        increamentBTN=document.querySelector("#increament")
+        decreamentBTN = document.querySelector("#decreament")
+        resetBTN = document.querySelector("#reset")
+        countElmt = document.querySelector("#count")
+        countElmt.textContent = count
+        increamentBTN.addEventListener('click', ()=>{
+            count++
+            countElmt.textContent = count
+        })
+        decreamentBTN.addEventListener("click",()=>{
+            if(count >0){
+            count--
+            }
+            countElmt.textContent = count
+        })
+        resetBTN.addEventListener("click",()=>{
+            count = 0
+            countElmt.textContent = count
+        })
+    </script>
+    <hr>
+    <button id="redButton">RED</button>
+    <button id="greenButton"> GREEN</button>
+    <button id="yellowButton">YELLOW</button>
+    <button id="blueButton">BLUE</button>
+    <button id="resetButton">RESET</button>
+    <script>
+        document.querySelector("#redButton").addEventListener("click",()=>{
+            document.body.style.backgroundColor = "red"
+        })
+          document.querySelector("#greenButton").addEventListener("click",()=>{
+            document.body.style.backgroundColor = "green"
+        })  
+        document.querySelector("#yellowButton").addEventListener("click",()=>{
+            document.body.style.backgroundColor = "yellow"
+        });
+        document.querySelector("#blueButton").addEventListener("click",()=>{
+            document.body.style.backgroundColor = "blue"
+        })
+        document.querySelector("#resetButton").addEventListener("click",()=>{
+            if(document.body.classList.contains("lightTheme")){
+                // document.body.classList.remove("lightTheme")
+                // document.body.classList.add("DarkTheme")
+                document.body.style.backgroundColor = "#fff"
+            }else{
+                // document.body.classList.add("lightTheme")
+                // document.body.classList.remove("DarkTheme")
+                document.body.style.backgroundColor = "#000"
+            }
+
+        })
+    </script>
+</body>
+</html>
