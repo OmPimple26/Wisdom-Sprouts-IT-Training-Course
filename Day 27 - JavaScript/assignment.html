@@ -1,0 +1,828 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assignment</title>
+  </head>
+  <body>
+    <h1>Answers</h1>
+
+    <script>
+      //   1. Positive, Negative, or Zero
+      //   const num = Number(prompt("Enter a number:"));
+
+      //   if(num > 0){
+      //     console.log("Positive number");
+      //   }else if(num < 0){
+      //     console.log("Negative number");
+      //   }else{
+      //     console.log("Zero");
+      //   }
+
+
+      //   2. Voting Eligibility
+      //   const age = Number(prompt("Enter your age:"));
+
+      //   if(age >= 18){
+      //     console.log("Eligible to vote");
+      //   }else{
+      //     console.log("Not eligible to vote");
+      //   }
+
+
+      //   3. Even or Odd
+      //   const num = Number(prompt("Enter a number:"));
+
+      //   if(num % 2 === 0){
+      //     console.log("Even number");
+      //   }else{
+      //     console.log("Odd number");
+      //   }
+
+
+      //   4. Greater of Two Numbers
+      //   const num1 = Number(prompt("Enter first number:"));
+      //   const num2 = Number(prompt("Enter second number:"));
+
+      //   if(num1 > num2){
+      //     console.log(num1 + " is greater");
+      //   }else if(num2 > num1){
+      //     console.log(num2 + " is greater");
+      //   }else{
+      //     console.log("Both numbers are equal");
+      //   }
+
+
+      //   5. Largest of Three Numbers
+      //   const a = Number(prompt("Enter first number:"));
+      //   const b = Number(prompt("Enter second number:"));
+      //   const c = Number(prompt("Enter third number:"));
+
+      //   if(a >= b && a >= c){
+      //     console.log(a + " is the largest");
+      //   }else if(b >= a && b >= c){
+      //     console.log(b + " is the largest");
+      //   }else{
+      //     console.log(c + " is the largest");
+      //   }
+
+
+      //   6. Leap Year
+      //   const year = Number(prompt("Enter a year:"));
+
+      //   if((year % 4 === 0 && year % 100 !== 0) || year % 400 === 0){
+      //     console.log(year + " is a Leap Year");
+      //   }else{
+      //     console.log(year + " is not a Leap Year");
+      //   }
+
+
+      //   7. Student Grade
+      //   const marks = Number(prompt("Enter marks:"));
+
+      //   if(marks >= 90 && marks <= 100){
+      //     console.log("Grade A");
+      //   }else if(marks >= 80){
+      //     console.log("Grade B");
+      //   }else if(marks >= 70){
+      //     console.log("Grade C");
+      //   }else if(marks >= 60){
+      //     console.log("Grade D");
+      //   }else if(marks >= 0){
+      //     console.log("Grade F");
+      //   }else{
+      //     console.log("Invalid marks");
+      //   }
+
+
+      //   8. Driving License Eligibility
+      //   const age = Number(prompt("Enter your age:"));
+
+      //   if(age >= 18){
+      //     console.log("Eligible for driving license");
+      //   }else{
+      //     console.log("Not eligible for driving license");
+      //   }
+
+
+      //   9. Divisible by Both 3 and 5
+      //   const num = Number(prompt("Enter a number:"));
+
+      //   if(num % 3 === 0 && num % 5 === 0){
+      //     console.log("Divisible by both 3 and 5");
+      //   }else{
+      //     console.log("Not divisible by both 3 and 5");
+      //   }
+
+
+      //   10. Vowel or Consonant
+      //   const character = prompt("Enter a character:").toLowerCase();
+
+      //   if(character === "a" || character === "e" || character === "i" || character === "o" || character === "u"){
+      //     console.log("Vowel");
+      //   }else{
+      //     console.log("Consonant");
+      //   }
+
+
+      // 11. Electricity Bill
+      // const units = Number(prompt("Enter units consumed:"));
+      // let bill = 0;
+
+      // if (units <= 100) {
+      //     bill = units * 5;
+      // } else if (units <= 200) {
+      //     bill = (100 * 5) + ((units - 100) * 7);
+      // } else {
+      //     bill = (100 * 5) + (100 * 7) + ((units - 200) * 10);
+      // }
+
+      // console.log("Electricity Bill: ₹" + bill);
+
+
+      // 12. Discount Based on Purchase Amount
+      // const amount = Number(prompt("Enter purchase amount:"));
+      // let discount = 0;
+
+      // if (amount > 10000) {
+      //     discount = amount * 0.20;
+      // } else if (amount >= 5000) {
+      //     discount = amount * 0.10;
+      // }
+
+      // console.log("Discount: ₹" + discount);
+
+
+      // 13. Final Price After Discount
+      // const amount = Number(prompt("Enter purchase amount:"));
+      // let discount = 0;
+
+      // if (amount > 10000) {
+      //     discount = amount * 0.20;
+      // } else if (amount >= 5000) {
+      //     discount = amount * 0.10;
+      // }
+
+      // const finalAmount = amount - discount;
+
+      // console.log("Original Amount: ₹" + amount);
+      // console.log("Discount Amount: ₹" + discount);
+      // console.log("Final Amount: ₹" + finalAmount);
+
+
+      // 14. Valid Triangle
+      // const a = Number(prompt("Enter first side:"));
+      // const b = Number(prompt("Enter second side:"));
+      // const c = Number(prompt("Enter third side:"));
+
+      // if (a + b > c && a + c > b && b + c > a) {
+      //     console.log("Valid Triangle");
+      // } else {
+      //     console.log("Invalid Triangle");
+      // }
+
+
+      // 15. Equilateral, Isosceles, or Scalene
+      // const a = Number(prompt("Enter first side:"));
+      // const b = Number(prompt("Enter second side:"));
+      // const c = Number(prompt("Enter third side:"));
+
+      // if (a === b && b === c) {
+      //     console.log("Equilateral Triangle");
+      // } else if (a === b || b === c || a === c) {
+      //     console.log("Isosceles Triangle");
+      // } else {
+      //     console.log("Scalene Triangle");
+      // }
+
+
+      // 16. Acute, Right-Angled, or Obtuse Triangle
+      // let a = Number(prompt("Enter first side:"));
+      // let b = Number(prompt("Enter second side:"));
+      // let c = Number(prompt("Enter third side:"));
+
+      // // Find the largest side
+      // let largest;
+
+      // if (a >= b && a >= c) {
+      //     largest = a;
+      // } else if (b >= a && b >= c) {
+      //     largest = b;
+      // } else {
+      //     largest = c;
+      // }
+
+      // const sumOfOtherSquares =
+      //     (a * a + b * b + c * c) - (largest * largest);
+
+      // const largestSquare = largest * largest;
+
+      // if (largestSquare === sumOfOtherSquares) {
+      //     console.log("Right-Angled Triangle");
+      // } else if (largestSquare < sumOfOtherSquares) {
+      //     console.log("Acute Triangle");
+      // } else {
+      //     console.log("Obtuse Triangle");
+      // }
+
+
+      // 17. Middle Value Among Three Different Numbers
+      // const a = Number(prompt("Enter first number:"));
+      // const b = Number(prompt("Enter second number:"));
+      // const c = Number(prompt("Enter third number:"));
+
+      // if ((a > b && a < c) || (a < b && a > c)) {
+      //     console.log("Middle value: " + a);
+      // } else if ((b > a && b < c) || (b < a && b > c)) {
+      //     console.log("Middle value: " + b);
+      // } else {
+      //     console.log("Middle value: " + c);
+      // }
+
+
+      // 18. Two-Digit, Three-Digit, or Other Number
+      // const num = Math.abs(Number(prompt("Enter a number:")));
+
+      // if (num >= 10 && num <= 99) {
+      //     console.log("Two-digit number");
+      // } else if (num >= 100 && num <= 999) {
+      //     console.log("Three-digit number");
+      // } else {
+      //     console.log("Other number");
+      // }
+
+
+      // 19. Employee Bonus
+      // const experience = Number(prompt("Enter years of experience:"));
+      // const salary = Number(prompt("Enter salary:"));
+
+      // let bonusPercentage;
+
+      // if (experience >= 10) {
+      //     bonusPercentage = 10;
+      // } else if (experience >= 5) {
+      //     bonusPercentage = 7;
+      // } else {
+      //     bonusPercentage = 5;
+      // }
+
+      // const bonus = salary * bonusPercentage / 100;
+
+      // console.log("Bonus: ₹" + bonus);
+
+
+      // 20. Salary Increment Based on Performance Rating
+      // const rating = Number(prompt("Enter performance rating (1-5):"));
+
+      // if (rating >= 4 && rating <= 5) {
+      //     console.log("Eligible for salary increment");
+      // } else if (rating >= 1 && rating < 4) {
+      //     console.log("Not eligible for salary increment");
+      // } else {
+      //     console.log("Invalid rating");
+      // }
+
+
+      // 21. Simple ATM Withdrawal System
+      // const balance = Number(prompt("Enter account balance:"));
+      // const withdrawalAmount = Number(prompt("Enter withdrawal amount:"));
+
+      // const minimumBalance = 1000;
+
+      // if (withdrawalAmount <= 0) {
+      //     console.log("Invalid withdrawal amount");
+      // } else if (withdrawalAmount > balance) {
+      //     console.log("Insufficient balance");
+      // } else if (balance - withdrawalAmount < minimumBalance) {
+      //     console.log("Minimum balance of ₹1000 must be maintained");
+      // } else {
+      //     const remainingBalance = balance - withdrawalAmount;
+
+      //     console.log("Withdrawal successful");
+      //     console.log("Remaining Balance: ₹" + remainingBalance);
+      // }
+
+
+      // 22. Login System
+      // const username = prompt("Enter username:");
+      // const password = prompt("Enter password:");
+
+      // const correctUsername = "admin";
+      // const correctPassword = "12345";
+
+      // if (username === correctUsername && password === correctPassword) {
+      //     console.log("Login successful");
+      // } else {
+      //     console.log("Invalid username or password");
+      // }
+
+
+      // 23. Website Access Based on Age and Membership
+      // const age = Number(prompt("Enter your age:"));
+      // const isMember = prompt("Are you a member? (yes/no)").toLowerCase();
+
+      // if (age >= 18 && isMember === "yes") {
+      //     console.log("Access granted");
+      // } else {
+      //     console.log("Access denied");
+      // }
+
+
+      // 24. Taxi Fare Based on Distance
+      // const distance = Number(prompt("Enter distance in km:"));
+      // let fare;
+
+      // if (distance <= 5) {
+      //     fare = distance * 20;
+      // } else if (distance <= 15) {
+      //     fare = (5 * 20) + ((distance - 5) * 15);
+      // } else {
+      //     fare = (5 * 20) + (10 * 15) + ((distance - 15) * 10);
+      // }
+
+      // console.log("Taxi Fare: ₹" + fare);
+
+
+      // 25. Movie Ticket Price
+      // const age = Number(prompt("Enter age:"));
+      // const isWeekend = prompt("Is it weekend? (yes/no)").toLowerCase();
+
+      // let ticketPrice;
+
+      // if (age < 12) {
+      //     ticketPrice = 100;
+      // } else if (age >= 60) {
+      //     ticketPrice = 150;
+      // } else {
+      //     ticketPrice = 200;
+      // }
+
+      // if (isWeekend === "yes") {
+      //     ticketPrice += 50;
+      // }
+
+      // console.log("Ticket Price: ₹" + ticketPrice);
+
+
+      // 26. Simple Calculator
+      // const num1 = Number(prompt("Enter first number:"));
+      // const operator = prompt("Enter operator (+, -, *, /):");
+      // const num2 = Number(prompt("Enter second number:"));
+
+      // switch (operator) {
+      //     case "+":
+      //         console.log("Result:", num1 + num2);
+      //         break;
+
+      //     case "-":
+      //         console.log("Result:", num1 - num2);
+      //         break;
+
+      //     case "*":
+      //         console.log("Result:", num1 * num2);
+      //         break;
+
+      //     case "/":
+      //         if (num2 !== 0) {
+      //             console.log("Result:", num1 / num2);
+      //         } else {
+      //             console.log("Cannot divide by zero");
+      //         }
+      //         break;
+
+      //     default:
+      //         console.log("Invalid operator");
+      // }
+
+
+      // 27. Day of the Week
+      // const day = Number(prompt("Enter day number (1-7):"));
+
+      // switch (day) {
+      //     case 1:
+      //         console.log("Monday");
+      //         break;
+      //     case 2:
+      //         console.log("Tuesday");
+      //         break;
+      //     case 3:
+      //         console.log("Wednesday");
+      //         break;
+      //     case 4:
+      //         console.log("Thursday");
+      //         break;
+      //     case 5:
+      //         console.log("Friday");
+      //         break;
+      //     case 6:
+      //         console.log("Saturday");
+      //         break;
+      //     case 7:
+      //         console.log("Sunday");
+      //         break;
+      //     default:
+      //         console.log("Invalid day number");
+      // }
+
+
+      // 28. Month Name and Number of Days
+      // const month = Number(prompt("Enter month number (1-12):"));
+
+      // switch (month) {
+      //     case 1:
+      //         console.log("January - 31 days");
+      //         break;
+      //     case 2:
+      //         console.log("February - 28 or 29 days");
+      //         break;
+      //     case 3:
+      //         console.log("March - 31 days");
+      //         break;
+      //     case 4:
+      //         console.log("April - 30 days");
+      //         break;
+      //     case 5:
+      //         console.log("May - 31 days");
+      //         break;
+      //     case 6:
+      //         console.log("June - 30 days");
+      //         break;
+      //     case 7:
+      //         console.log("July - 31 days");
+      //         break;
+      //     case 8:
+      //         console.log("August - 31 days");
+      //         break;
+      //     case 9:
+      //         console.log("September - 30 days");
+      //         break;
+      //     case 10:
+      //         console.log("October - 31 days");
+      //         break;
+      //     case 11:
+      //         console.log("November - 30 days");
+      //         break;
+      //     case 12:
+      //         console.log("December - 31 days");
+      //         break;
+      //     default:
+      //         console.log("Invalid month number");
+      // }
+
+
+      // 29. Food Ordering System
+      // const choice = Number(prompt(
+      //     "Menu:\n1. Pizza - ₹250\n2. Burger - ₹150\n3. Sandwich - ₹100\n4. Pasta - ₹200\nEnter your choice:"
+      // ));
+
+      // let price = 0;
+
+      // switch (choice) {
+      //     case 1:
+      //         console.log("You ordered Pizza");
+      //         price = 250;
+      //         break;
+
+      //     case 2:
+      //         console.log("You ordered Burger");
+      //         price = 150;
+      //         break;
+
+      //     case 3:
+      //         console.log("You ordered Sandwich");
+      //         price = 100;
+      //         break;
+
+      //     case 4:
+      //         console.log("You ordered Pasta");
+      //         price = 200;
+      //         break;
+
+      //     default:
+      //         console.log("Invalid choice");
+      // }
+
+      // if (price > 0) {
+      //     console.log("Price: ₹" + price);
+      // }
+
+
+      // 30. Number to English Word
+      // const num = Number(prompt("Enter a number (1-5):"));
+
+      // switch (num) {
+      //     case 1:
+      //         console.log("One");
+      //         break;
+      //     case 2:
+      //         console.log("Two");
+      //         break;
+      //     case 3:
+      //         console.log("Three");
+      //         break;
+      //     case 4:
+      //         console.log("Four");
+      //         break;
+      //     case 5:
+      //         console.log("Five");
+      //         break;
+      //     default:
+      //         console.log("Invalid number");
+      // }
+
+
+      // 31. Vowel Using Switch
+      // const character = prompt("Enter a character:").toLowerCase();
+
+      // switch (character) {
+      //     case "a":
+      //     case "e":
+      //     case "i":
+      //     case "o":
+      //     case "u":
+      //         console.log("Vowel");
+      //         break;
+
+      //     default:
+      //         console.log("Consonant");
+      // }
+
+
+      // 32. Area Calculator Using Switch
+      // const choice = prompt(
+      //     "Choose shape:\n1. Circle\n2. Rectangle\n3. Triangle"
+      // );
+
+      // switch (choice) {
+      //     case "1":
+      //         const radius = Number(prompt("Enter radius:"));
+      //         console.log("Area of Circle:", Math.PI * radius * radius);
+      //         break;
+
+      //     case "2":
+      //         const length = Number(prompt("Enter length:"));
+      //         const width = Number(prompt("Enter width:"));
+      //         console.log("Area of Rectangle:", length * width);
+      //         break;
+
+      //     case "3":
+      //         const base = Number(prompt("Enter base:"));
+      //         const height = Number(prompt("Enter height:"));
+      //         console.log("Area of Triangle:", 0.5 * base * height);
+      //         break;
+
+      //     default:
+      //         console.log("Invalid choice");
+      // }
+
+
+      // 33. Temperature Conversion
+      // const temperature = Number(prompt("Enter temperature:"));
+      // const unit = prompt("Enter unit (C, F, K):").toUpperCase();
+
+      // if (unit === "C") {
+      //     const fahrenheit = (temperature * 9 / 5) + 32;
+      //     const kelvin = temperature + 273.15;
+
+      //     console.log("Fahrenheit:", fahrenheit);
+      //     console.log("Kelvin:", kelvin);
+
+      // } else if (unit === "F") {
+      //     const celsius = (temperature - 32) * 5 / 9;
+      //     const kelvin = celsius + 273.15;
+
+      //     console.log("Celsius:", celsius);
+      //     console.log("Kelvin:", kelvin);
+
+      // } else if (unit === "K") {
+      //     const celsius = temperature - 273.15;
+      //     const fahrenheit = (celsius * 9 / 5) + 32;
+
+      //     console.log("Celsius:", celsius);
+      //     console.log("Fahrenheit:", fahrenheit);
+
+      // } else {
+      //     console.log("Invalid unit");
+      // }
+
+
+      // 34. Shipping Charges
+      // const weight = Number(prompt("Enter package weight in kg:"));
+      // const deliveryType = prompt("Enter delivery type (standard/express):").toLowerCase();
+
+      // let shippingCharge;
+
+      // if (deliveryType === "standard") {
+      //     if (weight <= 2) {
+      //         shippingCharge = 50;
+      //     } else {
+      //         shippingCharge = 100;
+      //     }
+
+      // } else if (deliveryType === "express") {
+      //     if (weight <= 2) {
+      //         shippingCharge = 100;
+      //     } else {
+      //         shippingCharge = 200;
+      //     }
+
+      // } else {
+      //     shippingCharge = 0;
+      //     console.log("Invalid delivery type");
+      // }
+
+      // if (shippingCharge > 0) {
+      //     console.log("Shipping Charge: ₹" + shippingCharge);
+      // }
+
+
+      // 35. Loan Eligibility
+      // const age = Number(prompt("Enter age:"));
+      // const salary = Number(prompt("Enter monthly salary:"));
+      // const creditScore = Number(prompt("Enter credit score:"));
+
+      // if (
+      //     age >= 21 &&
+      //     age <= 60 &&
+      //     salary >= 25000 &&
+      //     creditScore >= 700
+      // ) {
+      //     console.log("Eligible for loan");
+      // } else {
+      //     console.log("Not eligible for loan");
+      // }
+
+
+      // 36. Income Tax Calculator
+      // const income = Number(prompt("Enter annual income:"));
+      // let tax = 0;
+
+      // if (income <= 250000) {
+      //     tax = 0;
+      // } else if (income <= 500000) {
+      //     tax = (income - 250000) * 0.05;
+      // } else if (income <= 1000000) {
+      //     tax = (250000 * 0.05) +
+      //           ((income - 500000) * 0.20);
+      // } else {
+      //     tax = (250000 * 0.05) +
+      //           (500000 * 0.20) +
+      //           ((income - 1000000) * 0.30);
+      // }
+
+      // console.log("Income Tax: ₹" + tax);
+
+
+      // 37. Password Validation
+      // const password = prompt("Enter password:");
+
+      // let hasNumber = false;
+      // let hasSpecialCharacter = false;
+
+      // for (let i = 0; i < password.length; i++) {
+      //     const char = password[i];
+
+      //     if (char >= "0" && char <= "9") {
+      //         hasNumber = true;
+      //     }
+
+      //     if (
+      //         char === "!" ||
+      //         char === "@" ||
+      //         char === "#" ||
+      //         char === "$" ||
+      //         char === "%" ||
+      //         char === "^" ||
+      //         char === "&" ||
+      //         char === "*"
+      //     ) {
+      //         hasSpecialCharacter = true;
+      //     }
+      // }
+
+      // if (
+      //     password.length >= 8 &&
+      //     hasNumber &&
+      //     hasSpecialCharacter
+      // ) {
+      //     console.log("Valid Password");
+      // } else {
+      //     console.log("Invalid Password");
+
+      //     if (password.length < 8) {
+      //         console.log("Password must contain at least 8 characters");
+      //     }
+
+      //     if (!hasNumber) {
+      //         console.log("Password must contain at least one number");
+      //     }
+
+      //     if (!hasSpecialCharacter) {
+      //         console.log("Password must contain at least one special character");
+      //     }
+      // }
+
+
+      // 38. Student Result Based on Three Subjects
+      // const subject1 = Number(prompt("Enter marks of Subject 1:"));
+      // const subject2 = Number(prompt("Enter marks of Subject 2:"));
+      // const subject3 = Number(prompt("Enter marks of Subject 3:"));
+
+      // const average = (subject1 + subject2 + subject3) / 3;
+
+      // console.log("Average:", average);
+
+      // if (
+      //     subject1 >= 40 &&
+      //     subject2 >= 40 &&
+      //     subject3 >= 40
+      // ) {
+      //     console.log("Result: PASS");
+      // } else {
+      //     console.log("Result: FAIL");
+      // }
+
+
+      // 39. Restaurant Billing System
+      // const foodBill = Number(prompt("Enter food bill amount:"));
+
+      // let discount = 0;
+
+      // if (foodBill > 5000) {
+      //     discount = foodBill * 0.20;
+      // } else if (foodBill >= 2000) {
+      //     discount = foodBill * 0.10;
+      // }
+
+      // const amountAfterDiscount = foodBill - discount;
+      // const serviceCharge = amountAfterDiscount * 0.05;
+      // const finalBill = amountAfterDiscount + serviceCharge;
+
+      // console.log("Original Bill: ₹" + foodBill);
+      // console.log("Discount: ₹" + discount);
+      // console.log("Service Charge: ₹" + serviceCharge);
+      // console.log("Final Bill: ₹" + finalBill);
+
+
+      // 40. Banking Menu Using Switch
+      let balance = 5000;
+      let running = true;
+
+      while (running) {
+          const choice = Number(prompt(
+              "BANKING MENU\n\n" +
+              "1. Deposit\n" +
+              "2. Withdraw\n" +
+              "3. Check Balance\n" +
+              "4. Exit\n\n" +
+              "Enter your choice:"
+          ));
+
+          switch (choice) {
+              case 1:
+                  const depositAmount = Number(
+                      prompt("Enter deposit amount:")
+                  );
+
+                  if (depositAmount > 0) {
+                      balance += depositAmount;
+                      console.log("Deposit successful");
+                      console.log("New Balance: ₹" + balance);
+                  } else {
+                      console.log("Invalid deposit amount");
+                  }
+                  break;
+
+              case 2:
+                  const withdrawAmount = Number(
+                      prompt("Enter withdrawal amount:")
+                  );
+
+                  if (withdrawAmount <= 0) {
+                      console.log("Invalid withdrawal amount");
+                  } else if (withdrawAmount > balance) {
+                      console.log("Insufficient balance");
+                  } else {
+                      balance -= withdrawAmount;
+                      console.log("Withdrawal successful");
+                      console.log("New Balance: ₹" + balance);
+                  }
+                  break;
+
+              case 3:
+                  console.log("Current Balance: ₹" + balance);
+                  break;
+
+              case 4:
+                  console.log("Thank you for using our banking system");
+                  running = false;
+                  break;
+
+              default:
+                  console.log("Invalid choice");
+          }
+      }
+    </script>
+  </body>
+</html>
