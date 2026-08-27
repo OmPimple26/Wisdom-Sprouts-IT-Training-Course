@@ -1,0 +1,814 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Objects and some In-Built functions</title>
+  </head>
+  <body>
+    <h1>Objects and some In-Built functions</h1>
+
+    <script>
+      // const Person = {name:"Akshit", age:26, designation:"Analyst", city:"Pune"};
+
+      // Person["Hobbie"] = "Dancing";
+
+      // console.log(Person);
+
+      // console.log(Person.designation);
+
+      // delete Person.city;
+
+      // console.log(Person);
+
+
+      // const Student = {name:'Sagar',
+      //                  age:18,
+      //                  Hobbies:["Dancing", "Playing", "Travelling"],
+      //                  address:{city:"Pune", pincode:"410398", area:"Hinjewadi"}
+      //                 };
+
+      // console.log(Student);
+
+      // console.log(Student.Hobbies[2]);
+
+      // console.log(Student.address.area);
+
+      // console.log(Student["address"]["area"]);
+
+
+      // Array of objects ->
+      // const Students = [{id:1, name:'s', age:18, grade:'A'},
+      //                   {id:2, name:'a', age:17, grade:'B'},
+      //                   {id:3, name:'y', age:16, grade:'A'},
+      //                   {id:4, name:'p', age:19, grade:'C'},
+      //                 ]
+
+      // console.log(Students);
+
+      // console.log(Students[2].grade);
+
+      // console.log(Students[2]["grade"]);
+
+
+      // Companies Example ->
+      //   const companies = [
+      //     {
+      //       id: "COMP-001",
+      //       name: "TechNova Solutions",
+      //       industry: "Software",
+      //       founded: 2016,
+      //       isActive: true,
+
+      //       headquarters: {
+      //         address: {
+      //           street: "42 Innovation Park",
+      //           area: "Hinjewadi",
+      //           city: "Pune",
+      //           state: "Maharashtra",
+      //           country: "India",
+      //           postalCode: 411057,
+      //         },
+      //         coordinates: {
+      //           latitude: 18.5913,
+      //           longitude: 73.7389,
+      //         },
+      //       },
+
+      //       contact: {
+      //         email: "contact@technova.com",
+      //         phone: "+91-9876543210",
+      //         website: "https://technova.example.com",
+      //         social: {
+      //           linkedin: "technova",
+      //           twitter: "technova",
+      //           github: "technova",
+      //         },
+      //       },
+
+      //       departments: [
+      //         {
+      //           id: "DEPT-001",
+      //           name: "Engineering",
+      //           budget: 2500000,
+      //           manager: {
+      //             id: "EMP-101",
+      //             name: "Rahul Sharma",
+      //             email: "rahul@technova.com",
+      //           },
+
+      //           teams: [
+      //             {
+      //               id: "TEAM-001",
+      //               name: "Frontend",
+      //               technology: ["React", "Next.js", "TypeScript"],
+
+      //               employees: [
+      //                 {
+      //                   id: "EMP-201",
+      //                   name: "Amit Patil",
+      //                   role: "Senior Frontend Developer",
+      //                   salary: 1800000,
+      //                   experience: 6,
+      //                   skills: [
+      //                     {
+      //                       name: "React",
+      //                       level: "Expert",
+      //                       years: 5,
+      //                     },
+      //                     {
+      //                       name: "TypeScript",
+      //                       level: "Advanced",
+      //                       years: 4,
+      //                     },
+      //                     {
+      //                       name: "Next.js",
+      //                       level: "Advanced",
+      //                       years: 3,
+      //                     },
+      //                   ],
+
+      //                   projects: [
+      //                     {
+      //                       id: "PROJ-101",
+      //                       name: "Customer Portal",
+      //                       status: "completed",
+      //                       startDate: "2024-01-10",
+      //                       endDate: "2024-08-20",
+
+      //                       technologies: ["React", "TypeScript", "GraphQL"],
+
+      //                       tasks: [
+      //                         {
+      //                           id: "TASK-001",
+      //                           title: "Create dashboard",
+      //                           status: "completed",
+      //                           priority: "high",
+      //                           estimatedHours: 20,
+      //                           actualHours: 18,
+      //                         },
+      //                         {
+      //                           id: "TASK-002",
+      //                           title: "Implement authentication",
+      //                           status: "completed",
+      //                           priority: "critical",
+      //                           estimatedHours: 16,
+      //                           actualHours: 20,
+      //                         },
+      //                       ],
+      //                     },
+
+      //                     {
+      //                       id: "PROJ-102",
+      //                       name: "Mobile Banking UI",
+      //                       status: "in-progress",
+      //                       startDate: "2025-02-01",
+      //                       endDate: null,
+
+      //                       technologies: ["React Native", "TypeScript", "Redux"],
+
+      //                       tasks: [
+      //                         {
+      //                           id: "TASK-003",
+      //                           title: "Login screen",
+      //                           status: "completed",
+      //                           priority: "high",
+      //                           estimatedHours: 12,
+      //                           actualHours: 10,
+      //                         },
+      //                         {
+      //                           id: "TASK-004",
+      //                           title: "Transaction screen",
+      //                           status: "in-progress",
+      //                           priority: "critical",
+      //                           estimatedHours: 30,
+      //                           actualHours: 22,
+      //                         },
+      //                       ],
+      //                     },
+      //                   ],
+      //                 },
+
+      //                 {
+      //                   id: "EMP-202",
+      //                   name: "Priya Deshmukh",
+      //                   role: "Frontend Developer",
+      //                   salary: 1200000,
+      //                   experience: 3,
+
+      //                   skills: [
+      //                     {
+      //                       name: "Vue.js",
+      //                       level: "Advanced",
+      //                       years: 3,
+      //                     },
+      //                     {
+      //                       name: "JavaScript",
+      //                       level: "Expert",
+      //                       years: 4,
+      //                     },
+      //                   ],
+
+      //                   projects: [
+      //                     {
+      //                       id: "PROJ-103",
+      //                       name: "Admin Dashboard",
+      //                       status: "in-progress",
+
+      //                       tasks: [
+      //                         {
+      //                           id: "TASK-005",
+      //                           title: "Build analytics page",
+      //                           status: "in-progress",
+      //                           priority: "medium",
+      //                         },
+      //                         {
+      //                           id: "TASK-006",
+      //                           title: "Create user management",
+      //                           status: "pending",
+      //                           priority: "high",
+      //                         },
+      //                       ],
+      //                     },
+      //                   ],
+      //                 },
+      //               ],
+      //             },
+
+      //             {
+      //               id: "TEAM-002",
+      //               name: "Backend",
+      //               technology: ["Node.js", "Java", "Python", "PostgreSQL"],
+
+      //               employees: [
+      //                 {
+      //                   id: "EMP-301",
+      //                   name: "Vikram Joshi",
+      //                   role: "Backend Architect",
+      //                   experience: 10,
+      //                   salary: 2800000,
+
+      //                   skills: [
+      //                     {
+      //                       name: "Node.js",
+      //                       level: "Expert",
+      //                       years: 8,
+      //                     },
+      //                     {
+      //                       name: "Microservices",
+      //                       level: "Expert",
+      //                       years: 7,
+      //                     },
+      //                     {
+      //                       name: "AWS",
+      //                       level: "Advanced",
+      //                       years: 6,
+      //                     },
+      //                   ],
+
+      //                   certifications: [
+      //                     {
+      //                       name: "AWS Solutions Architect",
+      //                       issuer: "Amazon",
+      //                       year: 2023,
+      //                       credentialId: "AWS-12345",
+      //                     },
+      //                     {
+      //                       name: "Kubernetes Administrator",
+      //                       issuer: "CNCF",
+      //                       year: 2024,
+      //                       credentialId: "K8S-67890",
+      //                     },
+      //                   ],
+
+      //                   projects: [
+      //                     {
+      //                       id: "PROJ-201",
+      //                       name: "Payment Gateway",
+      //                       status: "production",
+
+      //                       architecture: {
+      //                         type: "microservices",
+      //                         services: [
+      //                           {
+      //                             name: "payment-service",
+      //                             language: "Node.js",
+      //                             database: "PostgreSQL",
+      //                             replicas: 5,
+      //                           },
+      //                           {
+      //                             name: "notification-service",
+      //                             language: "Python",
+      //                             database: "MongoDB",
+      //                             replicas: 3,
+      //                           },
+      //                           {
+      //                             name: "fraud-service",
+      //                             language: "Java",
+      //                             database: "PostgreSQL",
+      //                             replicas: 4,
+      //                           },
+      //                         ],
+
+      //                         infrastructure: {
+      //                           cloud: "AWS",
+      //                           region: "ap-south-1",
+      //                           kubernetes: true,
+
+      //                           resources: {
+      //                             cpu: "16 cores",
+      //                             memory: "64GB",
+      //                             storage: "2TB",
+      //                           },
+      //                         },
+      //                       },
+
+      //                       apiEndpoints: [
+      //                         {
+      //                           method: "POST",
+      //                           path: "/api/v1/payments",
+      //                           authentication: "JWT",
+      //                           rateLimit: {
+      //                             requests: 100,
+      //                             duration: "1m",
+      //                           },
+      //                         },
+      //                         {
+      //                           method: "GET",
+      //                           path: "/api/v1/payments/:id",
+      //                           authentication: "JWT",
+      //                           rateLimit: {
+      //                             requests: 200,
+      //                             duration: "1m",
+      //                           },
+      //                         },
+      //                       ],
+      //                     },
+      //                   ],
+      //                 },
+      //               ],
+      //             },
+      //           ],
+      //         },
+
+      //         {
+      //           id: "DEPT-002",
+      //           name: "Human Resources",
+      //           budget: 800000,
+
+      //           manager: {
+      //             id: "EMP-401",
+      //             name: "Neha Kulkarni",
+      //             email: "neha@technova.com",
+      //           },
+
+      //           policies: [
+      //             {
+      //               name: "Work From Home",
+      //               enabled: true,
+      //               maxDaysPerMonth: 8,
+      //             },
+      //             {
+      //               name: "Paid Leave",
+      //               enabled: true,
+      //               annualDays: 24,
+      //             },
+      //           ],
+
+      //           employees: [
+      //             {
+      //               id: "EMP-402",
+      //               name: "Sneha Mehta",
+      //               role: "HR Manager",
+
+      //               benefits: {
+      //                 healthInsurance: {
+      //                   provider: "HealthCare Plus",
+      //                   coverage: 1000000,
+      //                   dependentsAllowed: 4,
+      //                 },
+
+      //                 retirement: {
+      //                   employerContribution: "12%",
+      //                   employeeContribution: "12%",
+      //                 },
+
+      //                 bonuses: [
+      //                   {
+      //                     type: "performance",
+      //                     percentage: 10,
+      //                   },
+      //                   {
+      //                     type: "annual",
+      //                     percentage: 5,
+      //                   },
+      //                 ],
+      //               },
+      //             },
+      //           ],
+      //         },
+      //       ],
+
+      //       products: [
+      //         {
+      //           id: "PROD-001",
+      //           name: "Enterprise CRM",
+      //           category: "Business Software",
+      //           version: "5.4.2",
+      //           price: {
+      //             currency: "INR",
+      //             monthly: 2499,
+      //             yearly: 24999,
+      //           },
+
+      //           features: [
+      //             {
+      //               name: "Customer Management",
+      //               enabled: true,
+      //             },
+      //             {
+      //               name: "Analytics",
+      //               enabled: true,
+      //             },
+      //             {
+      //               name: "AI Assistant",
+      //               enabled: true,
+      //             },
+      //             {
+      //               name: "API Access",
+      //               enabled: true,
+      //             },
+      //           ],
+
+      //           integrations: [
+      //             {
+      //               name: "Slack",
+      //               type: "communication",
+      //               enabled: true,
+      //             },
+      //             {
+      //               name: "Salesforce",
+      //               type: "CRM",
+      //               enabled: false,
+      //             },
+      //             {
+      //               name: "Google Workspace",
+      //               type: "productivity",
+      //               enabled: true,
+      //             },
+      //           ],
+
+      //           customers: [
+      //             {
+      //               id: "CUS-001",
+      //               company: "ABC Industries",
+      //               plan: "enterprise",
+
+      //               users: [
+      //                 {
+      //                   id: "USR-001",
+      //                   name: "John Doe",
+      //                   role: "admin",
+      //                   permissions: ["read", "write", "delete", "manage_users"],
+      //                 },
+      //                 {
+      //                   id: "USR-002",
+      //                   name: "Jane Smith",
+      //                   role: "manager",
+      //                   permissions: ["read", "write"],
+      //                 },
+      //               ],
+
+      //               billing: {
+      //                 status: "paid",
+      //                 lastPayment: {
+      //                   amount: 24999,
+      //                   currency: "INR",
+      //                   date: "2026-08-01",
+      //                   method: "credit_card",
+      //                 },
+
+      //                 invoices: [
+      //                   {
+      //                     id: "INV-1001",
+      //                     amount: 24999,
+      //                     status: "paid",
+      //                     dueDate: "2026-08-01",
+      //                   },
+      //                   {
+      //                     id: "INV-1002",
+      //                     amount: 24999,
+      //                     status: "pending",
+      //                     dueDate: "2026-09-01",
+      //                   },
+      //                 ],
+      //               },
+      //             },
+      //           ],
+      //         },
+      //       ],
+
+      //       analytics: {
+      //         revenue: {
+      //           currentYear: 125000000,
+      //           previousYear: 98000000,
+      //           growthPercentage: 27.55,
+      //         },
+
+      //         monthlyRevenue: [
+      //           {
+      //             month: "January",
+      //             revenue: 9500000,
+      //             expenses: 5200000,
+      //             profit: 4300000,
+      //           },
+      //           {
+      //             month: "February",
+      //             revenue: 10200000,
+      //             expenses: 5400000,
+      //             profit: 4800000,
+      //           },
+      //           {
+      //             month: "March",
+      //             revenue: 11000000,
+      //             expenses: 5700000,
+      //             profit: 5300000,
+      //           },
+      //         ],
+
+      //         performance: {
+      //           customerSatisfaction: 92,
+      //           employeeSatisfaction: 87,
+      //           systemUptime: 99.98,
+      //           averageResponseTime: 142,
+      //         },
+      //       },
+
+      //       security: {
+      //         authentication: {
+      //           methods: ["password", "oauth", "sso", "mfa"],
+
+      //           passwordPolicy: {
+      //             minLength: 12,
+      //             requireUppercase: true,
+      //             requireLowercase: true,
+      //             requireNumbers: true,
+      //             requireSpecialCharacters: true,
+      //             expiryDays: 90,
+      //           },
+      //         },
+
+      //         auditLogs: [
+      //           {
+      //             timestamp: "2026-08-27T08:30:00Z",
+      //             userId: "USR-001",
+      //             action: "LOGIN",
+      //             ipAddress: "192.168.1.10",
+      //             success: true,
+      //           },
+      //           {
+      //             timestamp: "2026-08-27T08:35:00Z",
+      //             userId: "USR-002",
+      //             action: "UPDATE_CUSTOMER",
+      //             resourceId: "CUS-001",
+      //             success: true,
+      //           },
+      //         ],
+      //       },
+      //     },
+
+      //     {
+      //       id: "COMP-002",
+      //       name: "CloudMatrix Technologies",
+      //       industry: "Cloud Computing",
+      //       founded: 2019,
+      //       isActive: true,
+
+      //       headquarters: {
+      //         address: {
+      //           city: "Bangalore",
+      //           state: "Karnataka",
+      //           country: "India",
+      //         },
+      //       },
+
+      //       departments: [
+      //         {
+      //           id: "DEPT-101",
+      //           name: "Cloud Engineering",
+
+      //           teams: [
+      //             {
+      //               name: "DevOps",
+
+      //               employees: [
+      //                 {
+      //                   id: "EMP-501",
+      //                   name: "Arjun Rao",
+      //                   role: "DevOps Engineer",
+
+      //                   skills: [
+      //                     "Docker",
+      //                     "Kubernetes",
+      //                     "Terraform",
+      //                     "AWS",
+      //                     "Azure",
+      //                   ],
+
+      //                   deployments: [
+      //                     {
+      //                       environment: "production",
+      //                       status: "successful",
+      //                       services: [
+      //                         {
+      //                           name: "api",
+      //                           replicas: 10,
+      //                           cpu: "4 cores",
+      //                           memory: "16GB",
+      //                         },
+      //                         {
+      //                           name: "worker",
+      //                           replicas: 6,
+      //                           cpu: "2 cores",
+      //                           memory: "8GB",
+      //                         },
+      //                       ],
+      //                     },
+      //                   ],
+      //                 },
+      //               ],
+      //             },
+      //           ],
+      //         },
+      //       ],
+
+      //       cloudAccounts: [
+      //         {
+      //           provider: "AWS",
+      //           accountId: "aws-prod",
+      //           regions: [
+      //             {
+      //               name: "ap-south-1",
+      //               resources: {
+      //                 ec2: 42,
+      //                 s3Buckets: 18,
+      //                 databases: 12,
+      //                 loadBalancers: 7,
+      //               },
+      //             },
+      //             {
+      //               name: "us-east-1",
+      //               resources: {
+      //                 ec2: 25,
+      //                 s3Buckets: 11,
+      //                 databases: 8,
+      //                 loadBalancers: 4,
+      //               },
+      //             },
+      //           ],
+      //         },
+      //       ],
+      //     },
+      //   ];
+
+      //   console.log(companies);
+
+      //   console.log(companies[1].departments[0].teams[0].employees[0].deployments[0].services)
+
+
+      // 2) String In-Built Methods ->
+      // charAt(), charCodeAt(), replaceAll(), slice(), split(), substr(), substring(), length, toLowerCase(), toUpperCase()
+
+      // 1. charAt()
+      //   let name = "JavaScript";
+
+      //   console.log(name.charAt(0)); // J
+      //   console.log(name.charAt(4)); // S
+
+
+      // 2. charCodeAt()
+      //   let name = "ABC";
+
+      //   console.log(name.charCodeAt(0)); // 65
+      //   console.log(name.charCodeAt(1)); // 66
+      //   console.log(name.charCodeAt(2)); // 67
+
+
+      // 3. replaceAll()
+      //   let text = "I like Java. Java is powerful.";
+
+      //   let newText = text.replaceAll("Java", "JavaScript");
+
+      //   console.log(newText);
+
+
+      // 4. slice()
+      //   let text = "JavaScript";
+
+      //   console.log(text.slice(0, 4)); // Java
+      //   console.log(text.slice(4)); // Script
+      //   console.log(text.slice(-6)); // Script
+
+
+      // 5. split()
+      //   let text = "HTML,CSS,JavaScript";
+
+      //   let result = text.split(",");
+
+      //   console.log(result);
+
+      //   let sentence = "I love coding";
+
+      //   console.log(sentence.split(" "));
+
+
+      // 6. substr()
+      //   let text = "JavaScript";
+
+      //   console.log(text.substr(0, 4)); // Java
+      //   console.log(text.substr(4, 6)); // Script
+
+
+      // 7. substring()
+      //   let text = "JavaScript";
+
+      //   console.log(text.substring(0, 4)); // Java
+      //   console.log(text.substring(4, 10)); // Script
+
+      //   let text = "JavaScript";
+
+      //   console.log(text.substring(-3)); // JavaScript
+      //   console.log(text.slice(-3));     // ipt
+
+
+      // 8. length
+      //   let text = "JavaScript";
+
+      //   console.log(text.length); // 10
+
+
+      // 9. toLowerCase()
+      //   let text = "HELLO WORLD";
+
+      //   console.log(text.toLowerCase());
+
+
+      // 10. toUpperCase()
+      //   let text = "hello world";
+
+      //   console.log(text.toUpperCase());
+
+
+      // 3) Looping through arrays In-Built methods ->
+      
+      // 1. forEach()
+      // const a = [22,23,24,25,26,27];
+
+      // for(let i=0; i<a.length; i++){
+      //   console.log(a[i]);
+      // }
+
+      // const result = a.forEach(function(item){
+      //   console.log(item);
+      // })
+
+
+      // 2. map()
+      // const a = [22,23,24,25,26,27];
+
+      // const result = a.map(function(item){
+      //   console.log(item);
+      // })
+
+
+      // 3. filter()
+      // const a = [22,23,24,25,26,27];
+
+      // const result = a.filter(function(age){
+      //   return age>24;
+      // })
+
+      // console.log(result);
+
+
+      // 4. for-in
+      // const a = [22,23,24,25,26,27];
+
+      // const person = {name:"om", age:22, designation:"analyst"};
+
+      // for(item in person){
+      //   // console.log(item);
+      //   console.log(person[item])
+      // }
+
+
+      // 5. for-of
+      const tools = ['Git', 'Docker', 'Webpack'];
+
+      for (const tool of tools) {
+        console.log(tool);
+      }
+
+    </script>
+  </body>
+</html>
