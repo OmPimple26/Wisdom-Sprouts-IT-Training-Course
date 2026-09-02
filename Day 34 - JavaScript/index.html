@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real Time JS Interview Questions</title>
+</head>
+<body>
+    <h1>Real Time JS Interview Questions</h1>
+    <script>
+        // 1. Remove spaces from a string ->
+
+        // let str = "hello , 12 worl3d...!!!";
+
+        // function replaceSpaces(string){
+        //     return string.replaceAll(' ',"");
+        // }
+
+        // let ans = replaceSpaces(str);
+        // console.log(ans);
+
+
+        // 2. Remove characters in a string except alphabets ->
+
+        // let str = "hello , 12 worl3d...!!!";
+
+        // function removeChars(string){
+        //     let result = "";
+
+        //     for(let i=0; i<string.length; i++){
+        //         if(string[i] !== string[i].toUpperCase() || string[i] !== string[i].toLowerCase()){
+        //             result += string[i];
+        //         }
+        //     }
+        //     return result;
+        // }
+
+        // let ans = removeChars(str);
+        // console.log(ans);
+
+
+        // 3. Sort a string in alphabetical order ->
+
+        // let str = "hello , 12 worl3d...!!!";
+
+        // function sortString(string){
+        //     let result = string.split("").sort().join("");
+        //     return result;
+        // }
+
+        // let ans = sortString(str);
+        // console.log(ans);
+
+
+        // 4. Remove vowels from a string ->
+
+        let str = "hello , 12 worl3d...!!!";
+
+        function removeVowels(string){
+            let result = "";
+
+            for(let i=0; i<string.length; i++){
+                if(string[i] !== 'a' && string[i] !== 'e' && string[i] !== 'i' && string[i] !== 'o' && string[i] !== 'u' && string[i] !== 'A' && string[i] !== 'E' && string[i] !== 'I' && string[i] !== 'O' && string[i] !== 'U'){
+                    result += string[i];
+                }
+            }
+            return result;
+        }
+
+        let ans = removeVowels(str);
+        console.log(ans);
+    </script>
+</body>
+</html>
