@@ -54,21 +54,151 @@
 
         // 4. Remove vowels from a string ->
 
-        let str = "hello , 12 worl3d...!!!";
+        // let str = "hello , 12 worl3d...!!!";
 
-        function removeVowels(string){
-            let result = "";
+        // function removeVowels(string){
+        //     let result = "";
 
-            for(let i=0; i<string.length; i++){
-                if(string[i] !== 'a' && string[i] !== 'e' && string[i] !== 'i' && string[i] !== 'o' && string[i] !== 'u' && string[i] !== 'A' && string[i] !== 'E' && string[i] !== 'I' && string[i] !== 'O' && string[i] !== 'U'){
-                    result += string[i];
-                }
+        //     for(let i=0; i<string.length; i++){
+        //         if(string[i] !== 'a' && string[i] !== 'e' && string[i] !== 'i' && string[i] !== 'o' && string[i] !== 'u' && string[i] !== 'A' && string[i] !== 'E' && string[i] !== 'I' && string[i] !== 'O' && string[i] !== 'U'){
+        //             result += string[i];
+        //         }
+        //     }
+        //     return result;
+        // }
+
+        // let ans = removeVowels(str);
+        // console.log(ans);
+
+
+        // let str = "jhweugierytwgqdgogwpiqdhaxnbchvduycdwqp";
+
+        // let result = "";
+
+        // for(let i=0; i<str.length; i++){
+        //     if(!(str[i] == 'a' ||  str[i] == 'e' || str[i] == 'i' || str[i] == 'o' || str[i] == 'u')){
+        //         result += str[i];
+        //     }
+        // }
+
+        // console.log(result);
+
+
+        // 5. Toggle string characters ->
+
+        // const inputStr =  "Hello, World!";
+
+        // function toggleStringCharacters(inputString) {
+        //     let toggledString = "";
+
+        //     for(let i=0; i<inputString.length; i++){
+        //         if(inputString[i] === inputString[i].toUpperCase()){
+        //             toggledString += inputString[i].toLowerCase();
+        //         }else{
+        //             toggledString += inputString[i].toUpperCase();
+        //         }
+        //     }
+        //     return toggledString;
+        // }
+
+        // let ans = toggleStringCharacters(inputStr);
+        // console.log(ans);
+
+
+        // 6. Length of a string without using strlen() function ->
+        
+        // let str = "Ansuhka";
+        // let ans = 0;
+
+        // for(let i=0; i<str.length; i++){
+        //     ans++;
+        // }
+
+        // console.log(ans);
+
+
+        // 7. Program to sort array elements in ascending and descending order ->
+
+        // let array = [5, 10, 88, 9, 100];
+
+        // function sortArrayAsc(arr){
+        //     return arr.sort((a,b) => a-b);
+        // }
+
+        // function sortArrayDesc(arr){
+        //     return arr.sort((a,b) => b-a);
+        // }
+
+        // let asc = sortArrayAsc(array);
+        // console.log(asc);
+
+        // let desc = sortArrayDesc(array);
+        // console.log(desc);
+
+
+        // 8. Take out characters which are not vowels ->
+
+        // let str = "njehuigfr";
+
+        // let vowels = ["a", "e", "i", "o", "u"];
+        // let ans = "";
+
+        // for(let i=0; i<str.length; i++){
+        //     if(!vowels.includes(str[i])){
+        //         ans +=  str[i];
+        //     }
+        // }
+
+        // console.log(ans);
+
+
+        // 9. Check whether character is alphabet or not ->
+
+        // let char1 = "A";
+        // let char2 = "8";
+
+        // function isAlphabet(character){
+        //     return character.toUpperCase() !== character.toLowerCase();
+        // }
+
+        // let ans1 = isAlphabet(char1);
+        // console.log(ans1);
+
+        // let ans2 = isAlphabet(char2);
+        // console.log(ans2);
+
+
+        // 10. Code to find Ascii value of a character ->
+
+        // const char = 'B';
+        // const asciiValue = char.charCodeAt(0);
+        // console.log(`The ASCII value of '${char}' is: ${asciiValue}`);
+
+
+        // 11. Uppercase, LowerCase or Special Characters ->
+
+        const char1 = 'A';
+        const char2 = 'a';
+        const char3 = '!';
+
+        function checkCharType(character){
+            if(character === character.toUpperCase() && character !== character.toLowerCase()){
+                return "Uppercase";
+            } else if(character === character.toLowerCase() && character !== character.toUpperCase()){
+                return "Lowercase";
+            } else {
+                return "Special Character";
             }
-            return result;
         }
 
-        let ans = removeVowels(str);
-        console.log(ans);
+        let ans1 = checkCharType(char1);
+        console.log(ans1);
+
+        let ans2 = checkCharType(char2);
+        console.log(ans2);
+
+        let ans3 = checkCharType(char3);
+        console.log(ans3);
     </script>
 </body>
 </html>
