@@ -177,28 +177,71 @@
 
         // 11. Uppercase, LowerCase or Special Characters ->
 
-        const char1 = 'A';
-        const char2 = 'a';
-        const char3 = '!';
+        // const char1 = 'A';
+        // const char2 = 'a';
+        // const char3 = '!';
 
-        function checkCharType(character){
-            if(character === character.toUpperCase() && character !== character.toLowerCase()){
-                return "Uppercase";
-            } else if(character === character.toLowerCase() && character !== character.toUpperCase()){
-                return "Lowercase";
-            } else {
-                return "Special Character";
-            }
+        // function checkCharType(character){
+        //     if(character === character.toUpperCase() && character !== character.toLowerCase()){
+        //         return "Uppercase";
+        //     } else if(character === character.toLowerCase() && character !== character.toUpperCase()){
+        //         return "Lowercase";
+        //     } else {
+        //         return "Special Character";
+        //     }
+        // }
+
+        // let ans1 = checkCharType(char1);
+        // console.log(ans1);
+
+        // let ans2 = checkCharType(char2);
+        // console.log(ans2);
+
+        // let ans3 = checkCharType(char3);
+        // console.log(ans3);
+
+
+        // 12. Check whether given year is a leap year or not ->
+
+        // function isLeapYear(year){
+        //     if((year % 4 === 0 && year % 100 !== 0) || (year % 400 === 0)){
+        //         return true;
+        //     }else {
+        //         return false;
+        //     }
+        // }
+
+        // console.log(isLeapYear(2000));
+        // console.log(isLeapYear(2001));
+
+
+
+        // Truthy and Falsy values in JavaScript ->
+
+        // Truthy values: 1,2,3,4, " ", [], {}, true
+        // Falsy values: 0, "", null, undefined, NaN, false, -1
+
+
+
+        // 13. Addition of two arrays ->
+
+        // const array = [2,4,6,7,9];
+
+        // for(let i=0; i<10; i++){
+        //     console.log(array[i] || 2);
+        // }
+
+
+        let array1 = [1,2,3,4,5];
+        let array2 = [1,2,3,4,5,6,7,8];
+
+        let res = [];
+
+        for(let i=0; i<array2.length; i++){
+            res.push((array2[i] || 0) + (array1[i] || 0));  // truthy value and falsy value
         }
 
-        let ans1 = checkCharType(char1);
-        console.log(ans1);
-
-        let ans2 = checkCharType(char2);
-        console.log(ans2);
-
-        let ans3 = checkCharType(char3);
-        console.log(ans3);
+        console.log(res);
     </script>
 </body>
 </html>
