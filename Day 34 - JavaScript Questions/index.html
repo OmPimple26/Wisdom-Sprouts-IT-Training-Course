@@ -358,24 +358,126 @@
 
         // 21. Provide the most repeated character and number of repeated? ->
 
-        let arr = ["a", "b", "c", "a", "d"];
+        // let arr = ["a", "b", "c", "a", "d"];
 
-        function getMaxElementCount(arr){
-            let obj = {};
+        // function getMaxElementCount(arr){
+        //     let obj = {};
 
-            arr.forEach(element => {
-                if(obj.hasOwnProperty(element)){
-                    obj[element] += 1;
-                }else{
-                    obj[element] = 1;
-                }
-            });
+        //     arr.forEach(element => {
+        //         if(obj.hasOwnProperty(element)){
+        //             obj[element] += 1;
+        //         }else{
+        //             obj[element] = 1;
+        //         }
+        //     });
 
-            return obj;
+        //     return obj;
+        // }
+
+        // let ans = getMaxElementCount(arr);
+        // console.log(ans);
+
+
+        // 22. Memoization ->
+
+        // const MemoAddition = () => {
+        //     let cache = {name:8}
+        //     return (value) => {
+        //         if(value in cache){
+        //             console.log("Fetching the value");
+        //             return cache[value];
+        //         }else{
+        //             console.log("Calculating the result");
+        //             let result = value + 20;
+        //             cache[value] = result;
+        //             return result;
+        //         }
+        //     }
+        // }
+
+        // const addition = MemoAddition();
+        // console.time();
+        // console.log(addition(3));
+        // console.timeEnd();
+
+        // console.time();
+        // console.log(addition(3));
+        // console.timeEnd();
+
+
+        // 23. Sum of Two Numbers ->
+
+        // function addition(start, end){
+        //     let sum = 0;
+
+        //     for(let i=start; i<=end; i++){
+        //         sum+=i;
+        //     }
+
+        //     return sum;
+        // }
+
+        // console.log(addition(20,30));
+
+
+        // 24. Swap two numbers without using third variable ->
+
+        // Method 1 ->
+        // let a = 7;
+        // let b = 13;
+
+        // a = a+b;
+        // b = a-b;
+        // a = a-b;
+
+        // console.log(a,b);
+
+
+        // Method 2 ->
+        // let a = 10;
+        // let b = 20;
+
+        // [a,b] = [b,a];
+
+        // console.log(a,b);
+
+
+        // Method 3 ->
+        // let a = 10;
+        // let b = 20;
+
+        // let temp = a;
+        // a = b;
+        // b = temp;
+        
+        // console.log(a,b);
+
+
+        // 25. Reverse a given number ->
+
+        // let num = 12345;
+
+        // let result = 0;
+
+        // for(let i=num; i!=0; i=Math.floor(i/10)){
+        //     let rem = i%10;
+        //     result = result*10 + rem;
+        // }
+
+        // console.log(result);
+
+
+        // 26. Factorial of a number ->
+
+        let num = 12345;
+
+        let result = 1;
+
+        for(let i=num; i>0; i=Math.floor(i/10)){
+            result *= i%10;
         }
 
-        let ans = getMaxElementCount(arr);
-        console.log(ans);
+        console.log(result);
     </script>
 </body>
 </html>
