@@ -469,15 +469,134 @@
 
         // 26. Factorial of a number ->
 
-        let num = 12345;
+        // let num = 12345;
 
-        let result = 1;
+        // let result = 1;
 
-        for(let i=num; i>0; i=Math.floor(i/10)){
-            result *= i%10;
+        // for(let i=num; i>0; i=Math.floor(i/10)){
+        //     result *= i%10;
+        // }
+
+        // console.log(result);
+
+
+        // 27. Remove duplicates ->
+
+        // i) Using forEach loop ->
+
+        // let a = [1,1,2,2,3,3,4,4,5,5,6,6,7,7];
+
+        // let result = [];
+
+        // a.forEach((item) => {
+        //     if(!result.includes(item)){
+        //         result.push(item);
+        //     }
+        // })
+
+        // console.log(result);
+
+
+        // ii) Using filter method ->
+
+        // let a = [1,1,2,2,3,3,4,4,5,5,6,6,7,7];
+
+        // const result = a.filter((element, index) => {
+        //     return a.indexOf(element==index);
+        // });
+
+        // console.log(result);
+
+
+        // 28. Frequency of characters with a string ->
+
+        // let str = "aabbcccddgstegtdysbagafdlmkb";
+        // let freq = {};
+
+        // for(let i=0; i<str.length; i++){
+        //     freq[str[i]] = (freq[str[i]] || 0) + 1;
+        // }
+
+        // let result = "";
+
+        // for(let x in freq){
+        //     console.log(`Key: ${x} Value: ${freq[x]}`);
+        // }
+
+
+        // 29. Non-repeating characters in a string ->
+
+        // let str="abccdddeeekuyy";
+        // let freq={};
+
+        // for(let i=0; i<str.length; i++){
+        //     freq[str[i]]=(freq[str[i]]||0) + 1;
+        // }
+
+        // let result="";
+
+        // for(let x in freq){
+        //     if(freq[x]<=1){
+        //         console.log(`key : ${x}  value: ${freq[x]}`)
+        //     }
+        // }
+
+
+        // 30. Check whether if two strings are anagram or not ->
+
+        // let str1="man";
+        // let str2="anm";
+
+        // let res1=str1.split("").sort().join("");
+        // let res2=str2.split("").sort().join("");
+
+        // if(res1==res2){
+        //     console.log("Anagram")
+        // }else{
+        //     console.log("Not a Anagram")
+        // }
+
+
+        // 31. Write a program to find the square root of perfect square no. ->
+
+        // let num=64;
+
+        // if(num==Math.floor(num)){
+        //     let res=Math.sqrt(num);
+    
+        //     if(res==Math.floor(res)){
+        //         console.log(res)
+        //     }else{
+        //         console.log("Not having perfect square root")
+        //     }
+        // }else{
+        //     console.log("Enter valid num")
+        // }
+
+
+        // 32. Capitalize the first and last letter of each word of a string ->
+
+        let str="hello world india";
+
+        let res=str.split(" ")
+
+        console.log(res);
+
+        for(let i=0; i<res.length; i++){
+            let tot="";
+    
+            for(let j=0; j<res[i].length; j++){
+                if(j==0 || j==res[i].length-1){
+                    tot+=res[i][j].toUpperCase();
+                }else{
+                    tot+=res[i][j];
+                }
+            }
+            res[i]=tot;
         }
 
-        console.log(result);
+        let ans=res.join(" ");
+        console.log(ans);
     </script>
 </body>
 </html>
