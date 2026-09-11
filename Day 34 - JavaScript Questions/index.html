@@ -326,7 +326,7 @@
         // console.log(str);
 
 
-        // 19. Make duplicte array ->
+        // 19. Make duplicate array ->
 
         // let a = [1,2,3,4,5];
 
@@ -576,27 +576,70 @@
 
         // 32. Capitalize the first and last letter of each word of a string ->
 
-        let str="hello world india";
+        // let str="hello world india";
 
-        let res=str.split(" ")
+        // let res=str.split(" ")
 
-        console.log(res);
+        // console.log(res);
 
-        for(let i=0; i<res.length; i++){
-            let tot="";
+        // for(let i=0; i<res.length; i++){
+        //     let tot="";
     
-            for(let j=0; j<res[i].length; j++){
-                if(j==0 || j==res[i].length-1){
-                    tot+=res[i][j].toUpperCase();
-                }else{
-                    tot+=res[i][j];
-                }
-            }
-            res[i]=tot;
-        }
+        //     for(let j=0; j<res[i].length; j++){
+        //         if(j==0 || j==res[i].length-1){
+        //             tot+=res[i][j].toUpperCase();
+        //         }else{
+        //             tot+=res[i][j];
+        //         }
+        //     }
+        //     res[i]=tot;
+        // }
 
-        let ans=res.join(" ");
-        console.log(ans);
+        // let ans=res.join(" ");
+        // console.log(ans);
+
+
+        // 33. Number is positive or negative ->
+
+        // function array(num){
+        //     if(num>=0){
+        //         console.log("Positive");
+        //     }else{
+        //         console.log("Negative");
+        //     }
+        // }
+
+        // array(2);
+        // array(-2);
+
+
+        // 34. A number is even or odd ->
+
+        // function array(num){
+        //     if(num%2==0){
+        //         console.log("Even");
+        //     }else{
+        //         console.log("Odd");
+        //     }
+        // }
+        
+        // array(112);
+        // array(121);
+
+
+        // 35. Rotating array from last one to 1st one ->
+
+        const a = [1, 2, 3, 4, 5];
+        const n = 3;
+
+        function add(a, n) {
+            for(let i = 0; i < n; i++){
+                a.unshift(a.pop());
+                console.log(a);
+            }
+        }
+        
+        add(a,n);
     </script>
 </body>
 </html>
