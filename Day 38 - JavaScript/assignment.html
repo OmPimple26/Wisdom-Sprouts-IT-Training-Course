@@ -1,0 +1,428 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+    <title>Change Text Content</title>
+</head>
+<body>
+	<p id="text">Original Text</p>
+	<button onclick="changeText()">Change Text</button>
+ 
+	<script>
+    	function changeText() {
+            document.getElementById('text').textContent = 'New Text';
+    	}
+	</script>
+</body>
+</html> -->
+
+
+ 
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+    <title>Change Background Color</title>
+</head>
+<body>
+	<button onclick="changeColor()">Change Background Color</button>
+ 
+	<script>
+    	function changeColor() {
+            document.body.style.backgroundColor = 'lightblue';
+    	}
+	</script>
+</body>
+</html> -->
+ 
+ 
+ 
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+    <title>Show/Hide Element</title>
+</head>
+<body>
+	<p id="paragraph">This is a paragraph.</p>
+	<button onclick="toggleVisibility()">Show/Hide</button>
+ 
+	<script>
+    	function toggleVisibility() {
+        	var paragraph = document.getElementById('paragraph');
+        	if (paragraph.style.display === 'none') {
+                paragraph.style.display = 'block';
+        	} else {
+                paragraph.style.display = 'none';
+        	}
+    	}
+	</script>
+</body>
+</html> -->
+ 
+ 
+ 
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Add New Element</title>
+</head>
+<body>
+	<div id="container"></div>
+	<button onclick="addElement()">Add Element</button>
+ 
+	<script>
+    	function addElement() {
+        	var newElement = document.createElement('p');
+            newElement.textContent = 'This is a new paragraph.';
+            document.getElementById('container').appendChild(newElement);
+    	}
+	</script>
+</body>
+</html> -->
+ 
+ 
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+    <title>Remove Element</title>
+</head>
+<body>
+	<p id="paragraph">This is a paragraph.</p>
+	<button onclick="removeElement()">Remove Element</button>
+ 
+	<script>
+    	function removeElement() {
+        	var paragraph = document.getElementById('paragraph');
+            paragraph.parentNode.removeChild(paragraph);
+    	}
+	</script>
+</body>
+</html> -->
+ 
+ 
+ 
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+    <title>Change Image Source</title>
+</head>
+<body>
+	<img id="image" src="image1.jpg" alt="Image" width="200">
+	<button onclick="changeImage()">Change Image</button>
+ 
+	<script>
+    	function changeImage() {
+            document.getElementById('image').src = 'image2.jpg';
+    	}
+	</script>
+</body>
+</html> -->
+ 
+ 
+ 
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+    <title>Change Font Size</title>
+</head>
+<body>
+	<p id="text">This is a paragraph.</p>
+	<button onclick="changeFontSize()">Change Font Size</button>
+ 
+	<script>
+    	function changeFontSize() {
+            document.getElementById('text').style.fontSize = '24px';
+    	}
+	</script>
+</body>
+</html> -->
+ 
+ 
+ 
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+    <title>Change Text Color</title>
+</head>
+<body>
+	<p id="text">This is a paragraph.</p>
+	<button onclick="changeTextColor()">Change Text Color</button>
+ 
+	<script>
+    	function changeTextColor() {
+            document.getElementById('text').style.color = 'red';
+    	}
+	</script>
+</body>
+</html> -->
+ 
+ 
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Count Button Clicks</title>
+</head>
+<body>
+	<button onclick="countClicks()">Click Me</button>
+	<p id="clickCount">0</p>
+ 
+	<script>
+    	let count = 0;
+    	function countClicks() {
+        	count++;
+        	document.getElementById('clickCount').textContent = count;
+    	}
+	</script>
+</body>
+</html> -->
+ 
+ 
+ 
+ 
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+    <title>Change Button Text on Click</title>
+</head>
+<body>
+	<button id="myButton" onclick="changeButtonText()">Click Me</button>
+ 
+	<script>
+    	function changeButtonText() {
+            document.getElementById('myButton').textContent = 'Clicked';
+    	}
+	</script>
+</body>
+</html> -->
+ 
+ 
+ 
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+    <title>Toggle Class on Element</title>
+	<style>
+    	.highlight {
+            background-color: yellow;
+    	}
+	</style>
+</head>
+<body>
+	<p id="paragraph">Toggle class on this paragraph.</p>
+	<button onclick="toggleClass()">Toggle Class</button>
+ 
+	<script>
+    	function toggleClass() {
+            document.getElementById('paragraph').classList.toggle('highlight');
+    	}
+	</script>
+</body>
+</html> -->
+ 
+ 
+ 
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+    <title>Toggle Class on Element</title>
+	<style>
+    	.highlight {
+            background-color: yellow;
+    	}
+	</style>
+</head>
+<body>
+	<p id="paragraph">Toggle class on this paragraph.</p>
+	<button onclick="toggleClass()">Toggle Class</button>
+ 
+	<script>
+    	function toggleClass() {
+            document.getElementById('paragraph').classList.toggle('highlight');
+    	}
+	</script>
+</body>
+</html> -->
+ 
+ 
+ 
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+    <title>Create a List</title>
+</head>
+<body>
+	<ul id="myList"></ul>
+	<button onclick="addItem()">Add Item</button>
+ 
+	<script>
+    	function addItem() {
+        	var listItem = document.createElement('li');
+            listItem.textContent = 'New Item';
+            document.getElementById('myList').appendChild(listItem);
+    	}
+	</script>
+</body>
+</html> -->
+ 
+ 
+ 
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+    <title>Remove List Item</title>
+</head>
+<body>
+	<ul id="myList">
+    	<li>Item 1</li>
+    	<li>Item 2</li>
+    	<li>Item 3</li>
+	</ul>
+	<button onclick="removeItem()">Remove Last Item</button>
+ 
+	<script>
+    	function removeItem() {
+        	var list = document.getElementById('myList');
+            list.removeChild(list.lastElementChild);
+    	}
+	</script>
+</body>
+</html> -->
+ 
+ 
+ 
+ 
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Form Validation</title>
+</head>
+<body>
+	<form id="myForm" onsubmit="return validateForm()">
+    	<input type="text" id="name" placeholder="Enter your name">
+    	<input type="submit" value="Submit">
+	</form>
+	<p id="error" style="color: red;"></p>
+ 
+	<script>
+    	function validateForm() {
+        	var name = document.getElementById('name').value;
+        	if (name === '') {
+                document.getElementById('error').textContent = 'Name is required';
+            	return false;
+        	}
+        	return true;
+    	}
+	</script>
+</body>
+</html> -->
+ 
+ 
+ 
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Show Alert on Button Click</title>
+</head>
+<body>
+	<button onclick="showAlert()">Show Alert</button>
+ 
+	<script>
+    	function showAlert() {
+            alert('Button Clicked!');
+    	}
+	</script>
+</body>
+</html> -->
+ 
+ 
+ 
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+    <title>Display Current Date and Time</title>
+</head>
+<body>
+	<p id="dateTime"></p>
+	<button onclick="showDateTime()">Show Date and Time</button>
+ 
+	<script>
+    	function showDateTime() {
+        	var now = new Date();
+            document.getElementById('dateTime').textContent = now.toString();
+    	}
+	</script>
+</body>
+</html> -->
+ 
+ 
+ 
+ 
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+    <title>Change Button Style on Click</title>
+</head>
+<body>
+	<button id="myButton" onclick="changeButtonStyle()">Click Me</button>
+ 
+	<script>
+    	function changeButtonStyle() {
+        	var button = document.getElementById('myButton');
+            button.style.backgroundColor = 'green';
+            button.style.color = 'white';
+    	}
+	</script>
+</body>
+</html> -->
+ 
+ 
+ 
+ 
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Add Event Listener to Button</title>
+</head>
+<body>
+	<button id="myButton">Click Me</button>
+ 
+	<script>
+        document.getElementById('myButton').addEventListener('click', function() {
+            alert('Button Clicked!');
+    	});
+	</script>
+</body>
+</html> -->
