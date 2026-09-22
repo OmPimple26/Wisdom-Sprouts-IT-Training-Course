@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS DOM Manipulation - Random Colours</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        body button{
+            height: 100px;
+            width: 200px;
+            border: 2px solid purple;
+            border-radius: 10px;
+            background-color: yellowgreen;
+            font-size: 1.2rem;
+            font-weight: bold;
+            font-family: cursive;
+            cursor: pointer;
+        }
+    </style>
+  </head>
+  <body>
+    <button id="button" onclick="changeColor()">Choose Random Colour</button>
+
+    <script>
+      function changeColor() {
+        const body = document.body;
+        const btn = document.getElementById("button");
+
+        // function changeBackground(){
+        //     body.style.background = 'red';
+        // }
+
+        function color() {
+          return Math.floor(Math.random() * 255);
+        }
+
+        // console.log(color(), color(), color());
+
+        body.style.background = `rgb(${color()},${color()},${color()})`;
+      }
+    </script>
+  </body>
+</html>
