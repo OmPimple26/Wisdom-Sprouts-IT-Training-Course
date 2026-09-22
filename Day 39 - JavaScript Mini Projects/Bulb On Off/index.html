@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bulb - On Off</title>
+</head>
+<body>
+    <section>
+        <img src="images/Bulb_Off.jpeg" alt="bulb">
+        <button onclick="Light()">Off</button>
+    </section>
+
+    <script>
+        const bulb = document.getElementsByTagName('img')[0];
+        const button = document.getElementsByTagName('button')[0];
+
+        console.log(bulb, "This is bulb");
+        console.log(button, "This is button");
+
+        function Light(){
+            if(bulb.src.includes("images/Bulb_Off.jpeg")){
+                bulb.src = "images/Bulb_On.jpeg";
+                button.textContent = "On";
+            }else{
+                bulb.src = "images/Bulb_Off.jpeg";
+                button.textContent = "Off";
+            }
+        }
+    </script>
+</body>
+</html>
