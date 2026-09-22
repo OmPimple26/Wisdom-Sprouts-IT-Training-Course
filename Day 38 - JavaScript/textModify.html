@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Modification</title>
+</head>
+<body>
+    <h1>🙏🩷 Ganpati Bappa Morya!!!... 🩷🙏</h1>
+
+    <h2></h2>
+
+    <button onclick="changeColor()">Change color</button>
+    <button onclick="addText()">Add Content</button>
+
+    <script>
+        function changeColor(){
+            document.body.getElementsByTagName('h1')[0].style.color = "red";
+        }
+
+        function addText(){
+            document.body.getElementsByTagName('h2')[0].textContent = "🙇‍♂️💛 Mangalmurti Morya!!!... 💛🙇‍♀️"
+            document.body.getElementsByTagName('h2')[0].style.color = "orange";
+        }
+    </script>
+</body>
+</html>

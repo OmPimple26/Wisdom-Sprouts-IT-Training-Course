@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Document</title>
+</head>
+<body>
+    <h1>JavaScript DOM Manipulation</h1>
+
+    <button class="btn" onclick="changeColor()">Change color</button>
+    <button class="btn" onclick="revertChanges()">Revert changes</button>
+
+    <section>
+        <div>
+            <section>
+                <h4 id="longcut">This is the long cut</h4>
+            </section>
+        </div>
+    </section>
+
+    <script>
+        // document.body.style.backgroundColor = "pink";
+
+        // let img = document.createElement('img');
+
+        // img.setAttribute('src', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTkQAYRVMvsxex8sVcguXn0X3b50RN2lajfdOm3hbLxWaaKDKzDIZspUs_Q&s=10');
+        // img.setAttribute('alt', 'Modak image');
+
+        // document.body.appendChild(img);
+
+        // img.height = 300
+        // img.width = 200
+
+
+        function changeColor(){
+            document.body.style.backgroundColor = "black";
+            document.body.firstElementChild.style.color = "magenta";
+        }
+
+        function revertChanges(){
+            document.body.style.backgroundColor = "white";
+            document.body.firstElementChild.style.color = "black";
+        }
+
+
+        document.body.getElementsByTagName('h4')[0].style.backgroundColor = "purple"
+        // 'purple'
+
+        document.body.getElementsByClassName('btn')[0].style.backgroundColor = "yellow"
+        // 'yellow'
+
+        // document.getElementById('longcut').style.backgroundColor = "blue"
+        // 'blue'
+    </script>
+</body>
+</html>
