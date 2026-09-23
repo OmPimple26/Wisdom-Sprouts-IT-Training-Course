@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Listener</title>
+</head>
+<body>
+    <h1 id="heading">B96 Batch</h1>
+    <button class="btn">Correct text</button>
+
+    <script>
+        const heading = document.getElementById('heading');
+        const button = document.getElementsByClassName('btn')[0];
+
+        // console.log(heading,button);
+
+        // button.addEventListener('mouseover', function(){
+        //     console.log("Hello");
+        //     console.log("Mouse Over");
+        //     button.style.border = "2px solid red";
+        // })
+
+        button.addEventListener('keydown', function(){
+            console.log("Hello");
+            console.log("Mouse Over");
+            button.style.border = "2px solid red";
+        })
+    </script>
+</body>
+</html>
