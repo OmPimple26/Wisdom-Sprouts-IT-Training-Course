@@ -1,0 +1,29 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Change Background Colour</title>
+  </head>
+  <body>
+    <button id="change">Change background colour</button>
+    <script>
+      let color = document.getElementById("change");
+      let body = document.body;
+
+      function changeColor() {
+        return Math.floor(Math.random() * 255);
+      }
+
+      color.addEventListener("click", function random() {
+        const color1 = changeColor();
+        const color2 = changeColor();
+        const color3 = changeColor();
+
+        rgbString = `rgb(${color1},${color2},${color3})`;
+
+        body.style.background = rgbString;
+      });
+    </script>
+  </body>
+</html>
