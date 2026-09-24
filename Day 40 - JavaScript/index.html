@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destructuring</title>
+</head>
+<body>
+    <h1>Destructuring</h1>
+
+    <script>
+        // const array = [20,30,40,50,60,70];
+
+
+        // Destructuring: A syntax that extracts values from arrays or objects and assigns them to distinct variables in a single statement.
+        // const[a,b] = array;
+        // console.log(a,b);
+
+        // const[a,b,c,d,e,f,g] = array;
+        // console.log(a,b,c,d,e,f,g);
+
+
+        // Rest Operator (...): A syntax that collects remaining or multiple elements and bundles them together into a single array or object.
+        // const[a,b,...rest] = array;
+        // console.log(a,b,rest);
+
+
+        // Spread Operator (...): A syntax that unpacks or expands an iterable (like an array or object) into individual elements or properties.
+        // const array1 = [20,30,40,50,60,70];
+        // const array2 = [0,0,0,0,0,0];
+
+        // const result = [...array1, ...array2];
+
+        // console.log(result);
+
+
+        // ------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+        const obj = {name:'om', age:22, designation: 'software engineer'};
+
+
+        // Destructuring:
+        // const{name,age} = obj;
+        // console.log(name,age);
+
+
+        // Rest Operator (...):
+        // const{name,age,...rest} = obj;
+        // console.log(name,age,rest);
+
+
+        // Spread Operator (...):
+        const result = {...obj};
+        console.log(result);
+
+
+        // ------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+        // const arr = [1, 2, 3];
+        // const obj = { a: 1, b: { c: 2 } };
+
+
+        // const [a, b] = array;
+        // const [a, , b] = array;
+        // const [a = aDefault, b] = array;
+        // const [a, b, ...rest] = array;
+        // const [a, , b, ...rest] = array;
+        // const [a, b, ...{ pop, push }] = array;
+        // const [a, b, ...[c, d]] = array;
+
+        // const { a, b } = obj;
+        // const { a: a1, b: b1 } = obj;
+        // const { a: a1 = aDefault, b = bDefault } = obj;
+        // const { a, b, ...rest } = obj;
+        // const { a: a1, b: b1, ...rest } = obj;
+        // const { [key]: a } = obj;
+
+        // let a, b, a1, b1, c, d, rest, pop, push;
+        // [a, b] = array;
+        // [a, , b] = array;
+        // [a = aDefault, b] = array;
+        // [a, b, ...rest] = array;
+        // [a, , b, ...rest] = array;
+        // [a, b, ...{ pop, push }] = array;
+        // [a, b, ...[c, d]] = array;
+
+        // ({ a, b } = obj); // parentheses are required
+        // ({ a: a1, b: b1 } = obj);
+        // ({ a: a1 = aDefault, b = bDefault } = obj);
+        // ({ a, b, ...rest } = obj);
+        // ({ a: a1, b: b1, ...rest } = obj);
+    </script>
+</body>
+</html>
