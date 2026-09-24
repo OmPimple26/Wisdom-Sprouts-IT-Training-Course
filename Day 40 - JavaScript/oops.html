@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OOPS</title>
+</head>
+<body>
+    <!-- 
+    OOPS = Object-Oriented Programming (OOP) in JavaScript is a programming paradigm that organizes code into reusable pieces called objects (which contain data) and methods (which contain logic/behavior)
+    Class = Blueprint for creating an object
+    Object = Instance of a class
+    Constructor = A special block of code used to initialize a newly created object 
+    -->
+
+    <h1>OOPS</h1>
+
+    <script>
+        // Example 1 ->
+
+        // class Student{
+        //     constructor(name,age,designation){
+        //         this.name = name;
+        //         this.age = age;
+        //         this.designation = designation;
+        //     }
+
+        //     print(){
+        //         console.log(`${this.name}`)
+        //     }
+        // }
+
+        // const s1 = new Student("Ramesh", 24, "Mechanical Engineer");
+        // console.log(s1);
+
+        // const s2 = new Student("Suresh", 26, "Electrical Engineer");
+        // console.log(s2);
+        // s2.print();
+
+
+        // Example 2 ->
+
+        // class Employee{
+        //     constructor(name,age){
+        //         this.name = name;
+        //         this.age = age;
+        //     }
+
+        //     getName(name){
+        //         console.log(name);
+        //     }
+
+        //     info(){
+        //         return `Your name is ${this.name} and your age is ${this.age}`;
+        //     }
+        // }
+
+        // const E1 = new Employee("Om", 24);
+        // console.log(E1);
+
+        // E1.getName();
+        // console.log(E1.info());
+
+        // const E2 = new Employee("Anushka", 26);
+        // console.log(E2);
+
+
+        // Example 3 ->
+
+        class Animal{
+            constructor(name,color,age,sound){
+                this.name = name;
+                this.color = color;
+                this.age = age;
+                this.sound = sound;
+            }
+
+            eat(){
+                return `${this.name} is eating its food and enjoying and also making sound ${this.sound}`;
+            }
+        }
+
+        const a1 = new Animal("Dog","Black",10,"Bark");
+        const a2 = new Animal("Elephant","Gray",10,"Trumpet");
+
+        console.log(a1);
+        console.log(a2);
+
+        console.log(a1.eat());
+        console.log(a2.eat());
+    </script>
+</body>
+</html>
