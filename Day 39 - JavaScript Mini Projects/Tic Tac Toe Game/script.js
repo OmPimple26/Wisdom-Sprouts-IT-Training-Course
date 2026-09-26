@@ -5,7 +5,6 @@ let gameOver = false;
 let board = ["", "", "", "", "", "", "", "", ""];
 
 // Winning combinations
-
 let winningPatterns = [
   [0, 1, 2],
   [3, 4, 5],
