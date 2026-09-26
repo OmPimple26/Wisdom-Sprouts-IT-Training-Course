@@ -13,36 +13,25 @@
     <div class="container">
       <h1>Password Generator</h1>
 
-      <p class="subtitle">Create a strong and secure password</p>
-
-      <!-- Password display -->
       <div class="password-box">
-        <input type="text" id="password" readonly placeholder="Your password" />
+        <input type="text" id="password" readonly />
 
-        <button id="copyBtn">Copy</button>
+        <button onclick="copyPassword()">Copy</button>
       </div>
 
-      <!-- Password length -->
-      <div class="length-section">
-        <div class="length-heading">
-          <label for="length">Password Length</label>
+      <label>Password Length</label>
 
-          <span id="lengthValue">12</span>
-        </div>
+      <input type="number" id="length" value="10" min="4" max="20" />
 
-        <input type="range" id="length" min="6" max="30" value="12" />
-      </div>
-
-      <!-- Password options -->
       <div class="options">
         <label>
           <input type="checkbox" id="uppercase" checked />
-          Uppercase Letters
+          Uppercase
         </label>
 
         <label>
           <input type="checkbox" id="lowercase" checked />
-          Lowercase Letters
+          Lowercase
         </label>
 
         <label>
@@ -51,26 +40,14 @@
         </label>
 
         <label>
-          <input type="checkbox" id="symbols" checked />
+          <input type="checkbox" id="symbols" />
           Symbols
         </label>
       </div>
 
-      <!-- Strength -->
-      <div class="strength-section">
-        <div class="strength-heading">
-          <span>Password Strength</span>
-
-          <span id="strengthText">Strong</span>
-        </div>
-
-        <div class="strength-bar">
-          <div id="strengthFill"></div>
-        </div>
-      </div>
-
-      <!-- Generate button -->
-      <button id="generateBtn" class="generate-btn">Generate Password</button>
+      <button class="generate" onclick="generatePassword()">
+        Generate Password
+      </button>
     </div>
 
     <script src="script.js"></script>
