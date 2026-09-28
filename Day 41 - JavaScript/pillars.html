@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OOPS Pillars</title>
+</head>
+<body>
+    <h1>OOPS Pillars</h1>
+
+    <script>
+        // 1. Abstraction - Abstraction in Object-Oriented Programming (OOP) is the process of hiding complex implementation details and exposing only the essential features of an object.
+
+        // class Bank{
+        //     #balance = 0;
+
+        //     constructor(owner, amount){
+        //         this.owner = owner;
+        //         this.#balance = amount;
+        //     }
+
+        //     deposit_money(deposit_amount){
+        //         if(deposit_amount>0){
+        //             this.#balance += deposit_amount;
+        //         }else{
+        //             return `Invalid deposit amount`;
+        //         }
+        //     }
+
+        //     withdraw_money(withdraw_amount){
+        //         if(withdraw_amount<this.#balance && withdraw_amount>0){
+        //             this.#balance -= withdraw_amount;
+        //         }else{
+        //             return `Insufficient Balance`;
+        //         }
+        //     }
+
+        //     getBalance(){
+        //         return `Your available balance is ${this.#balance}`;
+        //     }
+        // }
+
+        // const B1 = new Bank("Om", 20000);
+
+        // console.log(B1.getBalance());
+
+        // B1.deposit_money(200);
+        // console.log(B1.deposit_money(0));
+
+        // console.log(B1.getBalance());
+
+        // B1.withdraw_money(19000);
+
+        // console.log(B1.getBalance());
+
+
+        // 2. Encapsulation - Encapsulation is one of the four fundamental concepts of Object-Oriented Programming (OOP) that bundles data (attributes) and the methods (functions) that operate on that data into a single unit, known as a class.
+        
+        // class UPI{
+        //     #balance = 0;
+
+        //     constructor(name, UPI_ID, amount){
+        //         this.name = name;
+        //         this.UPI_ID = UPI_ID;
+        //         this.#balance = amount;
+        //     }
+
+        //     send_money(receiver_UPI_ID, amount){
+        //         if(amount<0){
+        //             console.log("Invalid Amount");
+        //         }
+
+        //         if(amount>this.#balance){
+        //             console.log("Insufficient Balance");
+        //         }
+
+        //         this.#balance -= amount;
+
+        //         console.log(`${amount}Rs has been sent to ${receiver_UPI_ID} successfully`);
+        //         console.log(`Sent by ${this.name}`);
+        //         console.log(`Your available balance is ${this.#balance}`);
+        //     }
+
+        //     get_Balance(){
+        //         console.log(`Your available balance is ${this.#balance}`);
+        //     }
+        // }
+
+        // const P1 = new UPI("Om", "25635673@sbi", 100);
+        // P1.get_Balance();
+        // P1.send_money("423367435@sbi", 50);
+        // P1.get_Balance();
+
+
+        // 3. Inheritance - Inheritance is a core pillar of Object-Oriented Programming (OOP) that allows a new class (child or subclass) to acquire the properties (attributes) and behaviors (methods) of an existing class (parent or superclass).
+
+        class Animal{
+            living(){
+                console.log("Animal is living its life...");
+            }
+        }
+
+        class Tiger extends Animal{
+            roar(){
+                console.log("Tiger is roaring...");
+            }
+        }
+
+        class Dog extends Tiger{
+            bark(){
+                console.log("Dog is barking...");
+            }
+        }
+
+        const a1 = new Animal();
+        a1.living();       // Possible
+        // a1.roar();      // Not Possible
+        // a1.bark();      // Not Possible
+
+        const a2 = new Tiger();
+        a2.living();       // Possible
+        a2.roar();         // Possible
+        // a2.bark();      // Not Possible
+
+        const a3 = new Dog();
+        a3.living();       // Possible
+        a3.roar();         // Possible
+        a3.bark();         // Possible
+    </script>
+</body>
+</html>
