@@ -1,4 +1,30 @@
-<!-- Note: Arrow function does not supports 'this' keyword -->
+<!-- Note: Arrow function does not support 'this' keyword -->
+
+<!-- JavaScript is fundamentally a prototype-based object-oriented language. Objects inherit properties and methods through the prototype chain. JavaScript also provides the class syntax, but classes internally use prototypes for inheritance. -->
+
+<!-- A prototype is an object from which another object can inherit properties and methods. JavaScript uses the prototype chain to look for properties and methods that are not directly present on an object. -->
+
+<!-- Note:
+
+In Java
+Class → Object
+
+In JavaScript
+Object → Prototype → Prototype → ... 
+
+-->
+
+<!-- Prototype chaining is JavaScript's mechanism for property and method lookup. When a property or method is not found on an object, JavaScript searches its prototype, then the prototype's prototype, continuing up the chain until the property is found or the chain reaches null.
+
+        Object
+          ↓
+      Prototype
+          ↓
+  Prototype's Prototype
+          ↓
+         null 
+         
+-->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -16,11 +42,11 @@
         }
 
         let arr = [1,2,3,4];
-        console.log(arr.om());
+        console.log(arr.om());  // 24
 
-        console.log(arr.__proto__);
-        console.log(arr.__proto__.__proto__);
-        console.log(arr.__proto__.__proto__.__proto__);
+        console.log(arr.__proto__);  // Array.prototype
+        console.log(arr.__proto__.__proto__);  // Object.prototype
+        console.log(arr.__proto__.__proto__.__proto__);  // null
     </script>
 </body>
 </html>
