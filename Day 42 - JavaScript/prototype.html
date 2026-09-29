@@ -1,0 +1,26 @@
+<!-- Note: Arrow function does not supports 'this' keyword -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prototype</title>
+</head>
+<body>
+    <h1>Prototype</h1>
+
+    <script>
+        Array.prototype.om = function(){
+            return this.length + 20;
+        }
+
+        let arr = [1,2,3,4];
+        console.log(arr.om());
+
+        console.log(arr.__proto__);
+        console.log(arr.__proto__.__proto__);
+        console.log(arr.__proto__.__proto__.__proto__);
+    </script>
+</body>
+</html>

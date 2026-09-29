@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OOPS Pillars</title>
+  </head>
+  <body>
+    <h1>OOPS Pillars</h1>
+
+    <script>
+      // Example 1 - Encapsulation + Abstraction + Inheritance
+
+      //   class UPI {
+      //     #balance;  // Encapsulation
+      //     constructor(upi_id, amount, owner) {
+      //       this.upi_id = upi_id;
+      //       this.#balance = amount;
+      //       this.owner = owner;
+      //     }
+
+      //     get_balance() {
+      //       return `Your available balance is ${this.#balance} Rs.`;
+      //     }
+
+      //     send_money(amount, id) {
+      //       if (amount < 0) {
+      //         console.log(`invalid amount`);
+      //         return;
+      //       }
+
+      //       if (amount > this.#balance) {
+      //         console.log("Insufficient Balance...");
+      //         return;
+      //       }
+
+      //       this.#balance -= amount;
+      //       console.log(`${amount} Rs. has been sent to ${id} successfully..`);
+      //       console.log(this.get_balance());
+      //     }
+      //   }
+
+      //   class PhonePay extends UPI {  // Inheritance
+      //     pay_bill(amount, id) {
+      //       this.send_money(amount, id);  // Abstraction
+      //       console.log("Bill has been paid by PhonePe...");
+      //     }
+      //   }
+
+      //   class GooglePay extends UPI {
+      //     mobile_recharge(amount, id, phone_number, operator) {
+      //       this.send_money(amount, id);
+      //       console.log(`Recharge for ${phone_number} has been successfull on your ${operator} sim operator. Enjoy your unlimited services with Jio Hotstar`);
+      //     }
+      //   }
+
+      //   const p1 = new PhonePay("94885@sbi", 20000, "Om");
+
+      //   const p2 = new GooglePay("94885@sbi", 20000, "Anushka");
+
+      //   p1.pay_bill(149, "84782782@sbi");
+
+      //   p2.mobile_recharge(249, "jio@ybl", 9948473892, "Jio");
+
+
+
+
+      //   Example 2 - Encapsulation + Abstraction + Inheritance + Polymorphism
+
+      class UPI {
+        #balance;
+        constructor(upi_id, amount, name) {
+          this.upi_id = upi_id;
+          this.#balance = amount;
+          this.name = name;
+        }
+
+        get_balance() {
+          return `Your available balance is ₹${this.#balance}`;
+        }
+
+        send_money(amount, id) {
+          if (amount < 0) {
+            console.log("Invalid Amount");
+            return;
+          }
+          if (amount > this.#balance) {
+            console.log("Insufficient Balance...");
+            return;
+          }
+
+          this.#balance -= amount;
+          console.log(`${amount} has been sent to ${id} UPI_ID`);
+          this.get_balance();
+        }
+
+        pay(amount, id) {
+          this.send_money(amount, id);
+        }
+      }
+
+      class PhonePay extends UPI {
+        pay(amount, id) {
+          this.send_money(amount, id);
+          console.log("Payment has been done by PhonePe");
+        }
+      }
+
+      class GooglePay extends UPI {
+        pay(amount, id) {
+          this.send_money(amount, id);
+          console.log("Payment has been done by GooglePay");
+        }
+      }
+
+      const u1 = new GooglePay("107878@ybl", 20000, "Om");
+      const u2 = new PhonePay("74396@sbi", 20000, "Anushka");
+
+      function PayTheBill(app, amount, id) {
+        app.pay(amount, id);
+      }
+
+      PayTheBill(u1, 200, "7261736@ybl");
+      console.log("\n");
+      PayTheBill(u2, 600, "2323275@SBI");
+    </script>
+  </body>
+</html>
