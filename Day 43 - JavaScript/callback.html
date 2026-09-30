@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Callback Function</title>
+</head>
+<body>
+    <h1>Callback Function</h1>
+
+    <script>
+        // The function which we send as an argument is known as callback function
+        // While the parent function in which callback function is called is Higher order function
+
+
+        // Example 1 ->
+
+        // function Hello(name, callback){
+        //     console.log("Hello",name,callback());
+        // }
+
+        // function surname(){    // Callback function
+        //     return "Pimple";
+        // }
+
+        // Hello("Om", surname);  // Higher order function
+
+
+
+        // Example 2 ->
+
+        // function Result(total){                        // Callback function
+        //     console.log(`Your total is ${total}`);
+        // }
+
+        // function Calculation(num1, num2, callback){
+        //     let result = num1 + num2;
+        //     callback(result);
+        // }
+
+        // Calculation(24,27,Result);                     // Higher order function
+
+
+
+        // Example 3 ->
+
+        const age = [20,30,40,50,60,70,80,90];
+
+        function agegroup(age){
+            return age>40;
+        }
+
+        const result = age.filter(agegroup);
+        console.log(result);
+    </script>
+</body>
+</html>

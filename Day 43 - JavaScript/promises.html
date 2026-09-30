@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promises</title>
+</head>
+<body>
+    <h1>Promises</h1>
+
+    <script>
+        // JavaScript is synchronous and single threaded. But JS can be made asynchronous.
+
+
+        // A JavaScript Promise is an object representing the eventual completion (or failure) of an asynchronous operation and its resulting value.
+
+        // 1. Promise States ->
+
+        // A Promise always exists in one of three states:
+        // • Pending: The initial state; the asynchronous operation is still running.
+        // • Fulfilled: The operation completed successfully, and resolve() was called.
+        // • Rejected: The operation failed, and reject() was called.
+
+
+        // The JavaScript Event Loop is the core mechanism that enables asynchronous, non-blocking programming in a single-threaded environment.
+
+
+        // Example ->
+        
+        console.log("Hello World");
+
+        Greetings();
+
+        console.log("Fellow World");
+
+        setTimeout(function(){
+            console.log("I am the async function");
+        },5000);
+
+        function Greetings(){
+            console.log("How are you doing...");
+        }
+
+        console.log("Om");
+    </script>
+</body>
+</html>
