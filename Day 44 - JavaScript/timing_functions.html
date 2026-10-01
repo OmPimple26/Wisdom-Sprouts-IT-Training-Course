@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timing Functions in JS</title>
+</head>
+<body>
+    <h1>Timing Functions in JS</h1>
+
+    <script>
+        // 1. setTimeout() ->
+
+        // const timerId = setTimeout((name) => {
+        //     console.log(`Hello, ${name}!`);
+        // },2000,"Alice");
+
+
+        // 2. clearTimeout() ->
+
+        // const alertId = setTimeout(() => {
+        //     console.log("This will never run.");
+        // },5000);
+
+        // Cancel the timeout immediately
+        // clearTimeout(alertId);
+
+
+        // 3. setInterval() ->
+
+        // const counterId = setInterval(() => {
+        //     console.log("Tick...");
+        // },1000);
+
+
+        // 4. clearInterval() ->
+
+        const alertTimer = setInterval(() => {
+            console.log("This will run in every 2 seconds");
+        },2000);
+
+        // console.log(alertTimer);
+
+        setTimeout(() => {
+            clearTimeout(alertTimer);
+        },7000);
+    </script>
+</body>
+</html>

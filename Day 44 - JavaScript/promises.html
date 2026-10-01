@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promises</title>
+</head>
+<body>
+    <h1>Promises</h1>
+
+    <script>
+        const Promises = new Promise(function(resolve,reject){
+            let isGood = true;
+
+            setTimeout(() => {
+                if(isGood){
+                    resolve("Everything is good...");
+                }else{
+                    reject("Not in good shape...");
+                }
+            }, 4000);
+        })
+
+        // console.log(Promises);
+
+        Promises.then((res) => {
+            console.log(res);
+        }).catch((err) => {
+            console.log(err);
+        });
+    </script>
+</body>
+</html>

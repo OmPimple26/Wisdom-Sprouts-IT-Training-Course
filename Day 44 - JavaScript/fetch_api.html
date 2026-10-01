@@ -1,0 +1,30 @@
+<!-- The JavaScript Fetch API is a built-in browser and Node.js (18+) interface used to make asynchronous HTTP requests. It is built on native Promises, serving as the modern replacement for the older XMLHttpRequest pattern. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetch API in JS</title>
+</head>
+<body>
+    <h1>Fetch API in JS</h1>
+
+    <h2></h2>
+
+    <script>
+        const heading = document.getElementsByTagName('h2')[0];
+
+        const result = fetch("https://jsonplaceholder.typicode.com/posts");
+
+        result.then((res) => {
+            return res.json();
+        }).then((item) => {
+            let result = item[0].title;
+            heading.textContent = result;
+        }).catch((err) => {
+            console.log(err);
+        })
+    </script>
+</body>
+</html>
