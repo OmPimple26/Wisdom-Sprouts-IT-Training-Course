@@ -1,0 +1,87 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.stopwatch {
+    background-color: white;
+    width: 400px;
+    padding: 30px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    margin-bottom: 25px;
+}
+
+#display {
+    font-size: 45px;
+    font-weight: bold;
+    margin-bottom: 25px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#startBtn {
+    background-color: green;
+    color: white;
+}
+
+#lapBtn {
+    background-color: orange;
+    color: white;
+}
+
+#resetBtn {
+    background-color: red;
+    color: white;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+.laps {
+    margin-top: 30px;
+    text-align: left;
+}
+
+.laps h2 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+#lapList {
+    list-style: none;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+#lapList li {
+    padding: 8px;
+    border-bottom: 1px solid #ddd;
+}
