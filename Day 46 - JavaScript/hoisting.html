@@ -1,0 +1,53 @@
+<!-- Hoisting is a behavior in JavaScript where the interpreter allocates memory for variable, function, and class declarations before executing the code. -->
+
+<!-- While it is commonly described as "moving declarations to the top of their scope," the physical code does not move. Instead, JavaScript scans the code during a compilation phase and sets up memory spaces for these identifiers. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hoisting</title>
+</head>
+<body>
+    <h1>Hoisting</h1>
+
+    <script>
+        // 1. Function Declarations -> Function declarations are fully hoisted.
+
+        greet(); // Output: "Hello!"
+
+        function greet() {
+            console.log("Hello!");
+        }
+
+
+        // 2. Variable Declarations with var -> Variables declared with var are hoisted and automatically initialized with a value of undefined.
+
+        console.log(user); // Output: undefined
+        var user = "Alice"; 
+        console.log(user); // Output: "Alice"
+
+
+        // 3. Variable Declarations with let and const -> let and const are also hoisted, but they are not initialized with any default value.
+
+        console.log(age); // Throws ReferenceError: Cannot access 'age' before initialization
+        let age = 30;
+
+
+        // 4. Function Expressions and Arrow Functions -> Function expressions and arrow functions follow the hoisting rules of the variable keyword used to declare them (var, let, or const). The function itself is not hoisted.
+
+        sayHi(); // Throws TypeError: sayHi is not a function (because sayHi is currently 'undefined')
+        
+        var sayHi = function() {
+            console.log("Hi!");
+        };
+
+        sayHello(); // Throws ReferenceError: Cannot access 'sayHello' before initialization
+
+        const sayHello = () => {
+            console.log("Hello!");
+        };
+    </script>
+</body>
+</html>
