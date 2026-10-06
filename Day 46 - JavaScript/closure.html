@@ -1,0 +1,70 @@
+<!-- In JavaScript, a closure is the combination of a function bundled together with references to its surrounding state, known as the lexical environment. -->
+
+<!-- Put simply, a closure allows an inner function to access variables from an outer function's scope even after the outer function has completely finished executing. -->
+
+<!-- In JavaScript, closures are created automatically every time a function is defined. -->
+
+<!-- Lexical scope (also known as static scope) means that the accessibility of variables is determined entirely by the physical placement of the code at write-time, not where or how a function is called. -->
+
+<!-- In JavaScript, functions create a new scope, and inner functions have access to the variables declared in their outer (parent) scopes. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Closure</title>
+</head>
+<body>
+    <h1>Closure</h1>
+
+    <script>
+        // Example 1: Memoization ->
+
+        const MemoAddition = () => {
+            let cache = {}
+            return (value) => {
+                if(value in cache){
+                    console.log("Fetching the value");
+                    return cache[value];
+                }else{
+                    console.log("Calculating the result");
+                    let result = value + 20;
+                    cache[value] = result;
+                    return result;
+                }
+            }
+        }
+
+        const addition = MemoAddition();
+        console.time();
+        console.log(addition(3));
+        console.timeEnd();
+
+        console.time();
+        console.log(addition(3));
+        console.timeEnd();
+
+
+
+        
+        // Example 2: Create counter ->
+
+        function createCounter() {
+            let count = 0; // "Enclosed" variable
+
+            return function() {
+                count++; // Accesses the outer scope variable
+                return count;
+            };
+        }
+
+        // counter holds the inner function returned by createCounter
+        const counter = createCounter(); 
+
+        console.log(counter()); // 1
+        console.log(counter()); // 2
+        console.log(counter()); // 3
+    </script>
+</body>
+</html>
