@@ -73,23 +73,128 @@
         //     return largest;
         // }
         
-        // console.log(findLargest([10, 25, 5, 40, 15]));
+        // console.log(findLargest([10,25,5,40,15]));
 
 
 
         // 5. Sum All Numbers in an Array ->
 
-        function sumArray(arr) {
-            let sum = 0;
+        // function sumArray(arr){
+        //     let sum = 0;
             
-            for (let i = 0; i < arr.length; i++) {
-                sum += arr[i];
+        //     for (let i = 0; i < arr.length; i++) {
+        //         sum += arr[i];
+        //     }
+            
+        //     return sum;
+        // }
+
+        // console.log(sumArray([10,20,30,40]));
+
+
+
+        // 6. Count Vowels in a String ->
+
+        // function countVowels(str){
+        //     let count = 0;
+            
+        //     for(let i=0; i<str.length; i++){
+        //         if("aeiouAEIOU".includes(str[i])){
+        //             count++;
+        //         }
+        //     }
+            
+        //     return count;
+        // }
+        
+        // console.log(countVowels("Hello World"));
+
+
+
+        // 7. Generate Fibonacci Sequence ->
+
+        // function fibonacci(n){
+        //     let prev = 0;
+        //     let curr = 1;
+
+        //     for(let i=0; i<n; i++){
+        //         let result = prev + curr;
+        //         prev = curr;
+        //         curr = result;
+        //     }
+
+        //     return curr;
+        // }
+
+        // console.log(fibonacci(7));
+
+
+        // function fibonacci(n){
+        //     let result = [];
+        //     let a = 0;
+        //     let b = 1;
+
+        //     for(let i=0; i<n; i++){
+        //         result.push(a);
+                
+        //         let next = a + b;
+        //         a = b;
+        //         b = next;
+        //     }
+
+        //     return result;
+        // }
+
+        // console.log(fibonacci(7));
+
+
+
+        // 8. Check Even or Odd ->
+
+        // function checkEvenOdd(num){
+        //     if(num%2 === 0){
+        //         return "Even";
+        //     }else{
+        //         return "Odd";
+        //     }
+        // }
+
+        // console.log(checkEvenOdd(10));
+        // console.log(checkEvenOdd(7));
+
+
+
+        // 9. Capitalize First Letter of Each Word ->
+
+        // function capitalizeWords(sentence){
+        //     let words = sentence.split(" ");
+
+        //     for(let i = 0; i<words.length; i++){
+        //         words[i] = words[i][0].toUpperCase() + words[i].slice(1);
+        //     }
+
+        //     return words.join(" ");
+        // }
+
+        // console.log(capitalizeWords("hello world javascript"));
+
+
+        
+        // 10. Remove Duplicates from an Array ->
+
+        function removeDuplicates(arr){
+            let result = [];
+
+            for(let i=0; i<arr.length; i++){
+                if(!result.includes(arr[i])){
+                    result.push(arr[i]);
+                }
             }
-            
-            return sum;
+
+            return result;
         }
 
-        console.log(sumArray([10, 20, 30, 40]));
+        console.log(removeDuplicates([1,2,2,3,4,4,5]));
     </script>
 </body>
-</html
+</html>
