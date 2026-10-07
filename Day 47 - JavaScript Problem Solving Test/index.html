@@ -182,19 +182,93 @@
         
         // 10. Remove Duplicates from an Array ->
 
-        function removeDuplicates(arr){
-            let result = [];
+        // function removeDuplicates(arr){
+        //     let result = [];
 
-            for(let i=0; i<arr.length; i++){
-                if(!result.includes(arr[i])){
-                    result.push(arr[i]);
-                }
-            }
+        //     for(let i=0; i<arr.length; i++){
+        //         if(!result.includes(arr[i])){
+        //             result.push(arr[i]);
+        //         }
+        //     }
 
-            return result;
+        //     return result;
+        // }
+
+        // console.log(removeDuplicates([1,2,2,3,4,4,5]));
+
+
+
+        // 11. Check if a Number is Prime ->
+
+        // function isPrime(num){
+        //     if(num<2){
+        //         return false;
+        //     }
+
+        //     for(let i=2; i<=Math.sqrt(num); i++){
+        //         if(num%i === 0){
+        //             return false;
+        //         }
+        //     }
+
+        //     return true;
+        // }
+
+        // console.log(isPrime(7));
+        // console.log(isPrime(10));
+
+
+
+        // 12. Convert Celsius to Fahrenheit ->
+
+        // function celsiusToFahrenheit(celsius){
+        //     return (celsius * 9/5) + 32;
+        // }
+
+        // console.log(celsiusToFahrenheit(25));
+
+
+
+        // 13. Find Longest Word in a Sentence ->
+
+        // function longestWord(sentence){
+        //     let words = sentence.split(" ");
+        //     let longest = "";
+
+        //     for(let i=0; i<words.length; i++){
+        //         if(words[i].length > longest.length){
+        //             longest = words[i];
+        //         }
+        //     }
+
+        //     return longest;
+        // }
+
+        // let result = longestWord("I am learning JavaScript");
+        // console.log(result);
+
+
+
+        // 14. Count Words in a Sentence ->
+
+        // function countWords(sentence){
+        //     let words = sentence.trim().split(/\s+/);
+        //     return words.length;
+        // }
+
+        // let result = countWords("I am learning JavaScript");
+        // console.log(result);
+
+
+
+        // 15. Replace All Occurrences of a Word in a String ->
+
+        function replaceWord(str,oldWord,newWord) {
+            return str.split(oldWord).join(newWord);
         }
 
-        console.log(removeDuplicates([1,2,2,3,4,4,5]));
+        let result = replaceWord("I like Java. Java is easy.", "Java", "JavaScript");
+        console.log(result);
     </script>
 </body>
 </html>
