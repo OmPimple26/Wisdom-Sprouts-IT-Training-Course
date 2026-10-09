@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Call, Apply, Bind</title>
+</head>
+<body>
+    <h1>Call, Apply, Bind</h1>
+
+    <script>
+        // In JavaScript, call(), apply(), and bind() are built-in methods used to explicitly set the this keyword context inside a function. They allow you to control which object a function should look at when executing its logic.
+
+
+        // 1. Call -> The call() method invokes a function immediately. The first argument you pass becomes the this context inside that function, and any subsequent arguments are passed individually, separated by commas.
+
+        // const Person = {name:"Om"};
+
+        // function YourName(){
+        //     console.log(`Your name is ${this.name}`);
+        // }
+
+        // YourName.call(Person);
+        // YourName.call(Person, name);
+
+
+        // const Person = {name:"Om"};
+
+        // function YourName(age, designation){
+        //     console.log(`Your name is ${this.name} and your age is ${age} and your designation is ${designation}`);
+        // }
+
+        // YourName.call(Person, 22, "Engineer");
+
+
+
+        // 2. Apply -> The apply() method works exactly like call() and executes the function immediately. The only difference is how it handles additional parameters: it expects them to be wrapped inside a single array (or an array-like object).
+
+        // const Person = {name:"Om"};
+
+        // function YourName(age, designation){
+        //     console.log(`Your name is ${this.name} and your age is ${age} and your designation is ${designation}`);
+        // }
+
+        // YourName.apply(Person, [22, "Engineer"]);
+
+        
+
+        // 3. Bind -> Unlike the other two, bind() does not execute the function right away. Instead, it makes a copy of the original function and returns a new function with the this context permanently locked to the object you provided. You can call this new function whenever you need it later.
+
+        const Person = {name:"Om"};
+
+        function YourName(age, designation){
+            console.log(`Your name is ${this.name} and your age is ${age} and your designation is ${designation}`);
+        }
+
+        const result = YourName.bind(Person, 22, "Engineer");
+        result();
+    </script>
+</body>
+</html>
