@@ -1,0 +1,42 @@
+<!-- In JavaScript, Object.freeze() and Object.seal() are static methods used to control the mutability of objects. -->
+ 
+<!-- Object.seal() are static methods used to control the mutability of objects. The main difference is that Object.freeze() makes an object completely read-only, preventing any modifications to existing values, while Object.seal() allows you to change the values of existing properties but prevents adding or removing properties. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object freeze and Object seal</title>
+</head>
+<body>
+    <h1>Object freeze and Object seal</h1>
+
+    <script>
+        // 1. Object.freeze() ->
+
+        const user = { name: "Alice", age: 25 };
+        Object.freeze(user);
+
+        user.age = 26;       // Fails silently (or throws TypeError in strict mode)
+        user.role = "Admin"; // Fails silently (Cannot add new property)
+        delete user.name;    // Fails silently (Cannot delete)
+
+        console.log(user);   // { name: "Alice", age: 25 }
+        console.log(Object.isFrozen(user)); // true
+
+
+        // 2. Object.seal() ->
+
+        const configuration = { theme: "light", retries: 3 };
+        Object.seal(configuration);
+
+        configuration.theme = "dark"; //  Allowed! Value is modified
+        configuration.lang = "en";    // Fails silently (Cannot add new property)
+        delete configuration.retries; // Fails silently (Cannot delete)
+
+        console.log(configuration);   // { theme: "dark", retries: 3 }
+        console.log(Object.isSealed(configuration)); // true
+    </script>
+</body>
+</html>
