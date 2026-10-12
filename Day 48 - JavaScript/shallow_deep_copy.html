@@ -1,0 +1,83 @@
+<!-- 1. Shallow Copy ->
+ 
+A shallow copy duplicates the top-level structure of an object or array, but any nested objects or arrays still point to the exact same reference locations in memory as the original. -->
+
+
+<!-- 2. Deep Copy ->
+
+A deep copy recursively duplicates every single level of the object or array. It breaks all connections, creating a completely standalone clone in memory. -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shallow and Deep Copy</title>
+</head>
+<body>
+    <h1>Shallow and Deep Copy</h1>
+
+    <script>
+        // Example 1 -
+
+        // 1. Shallow Copy ->
+
+        // a = {name:"Om", age:22, address:{street:"Baner"}};
+        // b = {...a};
+
+        // b.name = "Anushka";
+        // console.log(a);
+        // console.log(b);
+
+        // b.address.street = "Hinjewadi Chawk";
+        // console.log(a);
+        // console.log(b);
+
+
+        // 2. Deep Copy ->
+
+        // a = {name:"Om", age:22, address:{street:"Baner"}};
+        // b = JSON.parse(JSON.stringify(a));
+
+        // b.name = "Anushka";
+        // console.log(a);
+        // console.log(b);
+
+        // b.address.street = "Hinjewadi Chawk";
+        // console.log(a);
+        // console.log(b);
+
+
+
+        // Example 2 -
+
+        // 1. Shallow Copy ->
+
+        // Student = {name:"Om", designation:"Software Engineer", hobbies:{sports:"Cricket"}};
+        // Employee = {...Student};
+
+        // Employee.name = "Anushka";
+        // console.log(Student);
+        // console.log(Employee);
+
+        // Employee.hobbies.sports = "Kabaddi";
+        // console.log(Student);
+        // console.log(Employee);
+
+
+        // 2. Deep Copy ->
+
+        Student = {name:"Om", designation:"Software Engineer", hobbies:{sports:"Cricket"}};
+        Employee = JSON.parse(JSON.stringify(Student));
+
+        Employee.name = "Anushka";
+        console.log(Student);
+        console.log(Employee);
+
+        Employee.hobbies.sports = "Kabaddi";
+        console.log(Student);
+        console.log(Employee);
+    </script>
+</body>
+</html>
