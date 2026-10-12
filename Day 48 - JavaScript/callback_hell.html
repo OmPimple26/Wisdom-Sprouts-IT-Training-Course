@@ -1,0 +1,58 @@
+<!-- Callback hell is a situation in JavaScript where multiple nested callback functions make the code look like a sideways pyramid (/ \), making it very hard to read, debug, or maintain. -->
+
+<!-- It happens when you chain multiple asynchronous operations where each step depends on the previous one. -->
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Callback Hell</title>
+  </head>
+  <body>
+    <h1>Callback Hell</h1>
+
+    <script>
+      // 1. Callback Hell Code -
+
+      //   boilWater(() => {
+      //     addTeaLeaves(() => {
+      //       pourIntoCup(() => {
+      //         addMilk(() => {
+      //           console.log("Your tea is ready!");
+      //         });
+      //       });
+      //     });
+      //   });
+
+
+      // How to Fix It ->
+
+      // Solution 1: Promises (Promise Chaining) -
+
+      //   boilWater()
+      //   .then(() => addTeaLeaves())
+      //   .then(() => pourIntoCup())
+      //   .then(() => addMilk())
+      //   .then(() => console.log("Your tea is ready!"))
+      //   .catch((error) => console.error("Error making tea:", error));
+
+
+      // Solution 2: Async / Await -
+
+      async function makeTea() {
+        try {
+            await boilWater();
+            await addTeaLeaves();
+            await pourIntoCup();
+            await addMilk();
+            console.log("Your tea is ready!");
+          } catch (error) {
+            console.error("Error making tea:", error);
+          }
+        }
+
+        makeTea();
+    </script>
+  </body>
+</html>
