@@ -1,0 +1,21 @@
+figure{
+    height: 200px;
+    width: 200px;
+    position: relative;
+    border: 1px solid red;
+}
+
+figure img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+figure figcaption{
+    position: absolute;
+    bottom: 0;
+    background-color: black;
+    color: aliceblue;
+    text-align: center;
+    width: 100%;
+}

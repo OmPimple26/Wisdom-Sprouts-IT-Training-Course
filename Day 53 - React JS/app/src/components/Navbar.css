@@ -1,0 +1,13 @@
+#navbar-wrapper{
+    display: flex;
+    padding: 0 2rem;
+    background-color: rgb(235, 48 ,111);
+    justify-content: space-between;
+    align-items: center;
+}
+
+#navbar-wrapper img{
+    height: 70px;
+    width: 70px;
+    border-radius: 100%;
+}

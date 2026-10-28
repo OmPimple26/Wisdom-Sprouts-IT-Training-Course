@@ -1,0 +1,12 @@
+#wrapper-card{
+    height: 500px;
+    width: 1024px;
+    background-color: #a29bfe;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center; /*row*/
+    align-items: center; /*column*/
+    margin: 0.6rem 0;
+    margin: auto;
+}
