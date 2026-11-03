@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Tours from "./components/Tours";
 import { destinations } from "./data";
+import NothingLeft from "./components/NothingLeft";
 
 function App() {
   const [state, setState] = useState(destinations);
@@ -15,7 +16,7 @@ function App() {
 
   return (
     <>
-      <Tours state={state} remove={remove} />
+      {state.length == 0 ? <NothingLeft setState={setState} destinations={destinations}/> : <Tours state={state} remove={remove}/>}
     </>
   );
 }
