@@ -4,28 +4,210 @@ const products = [
     name: "Laptop",
     price: 55000,
     category: "Electronics",
-    image: "data:image/jpeg;base64,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"
+    image: "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=600"
   },
   {
     id: 2,
     name: "Mobile Phone",
     price: 25000,
     category: "Electronics",
-    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQANFLN7sMTvWoYZtrjLPhyxpb09pvdtkYeCkHPf7HyzQ&s=10"
+    image: "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=600"
   },
   {
     id: 3,
     name: "Headphones",
     price: 2000,
     category: "Accessories",
-    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRMDlz697MVCwG0dx2q0cN8Np3SURq0RqN8HUdsot8eSg&s"
+    image: "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=600"
   },
   {
     id: 4,
     name: "Smart Watch",
     price: 3500,
     category: "Accessories",
-    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFGWOXyTb2Nc-q1fuWbfniewXgAbR0JPV1y2tDg6XmUg&s=10"
+    image: "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=600"
+  },
+  {
+    id: 5,
+    name: "Digital Camera",
+    price: 45000,
+    category: "Electronics",
+    image: "https://images.unsplash.com/photo-1516035069371-29a1b244cc32?w=600"
+  },
+  {
+    id: 6,
+    name: "Mechanical Keyboard",
+    price: 4500,
+    category: "Accessories",
+    image: "https://images.unsplash.com/photo-1587829741301-dc798b83add3?w=600"
+  },
+  {
+    id: 7,
+    name: "Wireless Mouse",
+    price: 1200,
+    category: "Accessories",
+    image: "https://images.unsplash.com/photo-1527814050087-3793815479db?w=600"
+  },
+  {
+    id: 8,
+    name: "Bluetooth Speaker",
+    price: 3000,
+    category: "Electronics",
+    image: "https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?w=600"
+  },
+  {
+    id: 9,
+    name: "Tablet",
+    price: 22000,
+    category: "Electronics",
+    image: "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?w=600"
+  },
+  {
+    id: 10,
+    name: "Computer Monitor",
+    price: 15000,
+    category: "Electronics",
+    image: "https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?w=600"
+  },
+  {
+    id: 11,
+    name: "Running Shoes",
+    price: 2800,
+    category: "Fashion",
+    image: "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=600"
+  },
+  {
+    id: 12,
+    name: "Casual T-Shirt",
+    price: 799,
+    category: "Fashion",
+    image: "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=600"
+  },
+  {
+    id: 13,
+    name: "Denim Jacket",
+    price: 2200,
+    category: "Fashion",
+    image: "https://images.unsplash.com/photo-1551028719-00167b16eac5?w=600"
+  },
+  {
+    id: 14,
+    name: "Travel Backpack",
+    price: 1800,
+    category: "Accessories",
+    image: "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=600"
+  },
+  {
+    id: 15,
+    name: "Sunglasses",
+    price: 999,
+    category: "Fashion",
+    image: "https://images.unsplash.com/photo-1511499767150-a48a237f0083?w=600"
+  },
+  {
+    id: 16,
+    name: "Leather Wallet",
+    price: 1200,
+    category: "Accessories",
+    image: "https://images.unsplash.com/photo-1627123424574-724758594e93?w=600"
+  },
+  {
+    id: 17,
+    name: "Modern Sofa",
+    price: 25000,
+    category: "Furniture",
+    image: "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=600"
+  },
+  {
+    id: 18,
+    name: "Comfortable Chair",
+    price: 4500,
+    category: "Furniture",
+    image: "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?w=600"
+  },
+  {
+    id: 19,
+    name: "Table Lamp",
+    price: 1500,
+    category: "Home Decor",
+    image: "https://images.unsplash.com/photo-1507473885765-e6ed057f782c?w=600"
+  },
+  {
+    id: 20,
+    name: "Coffee Table",
+    price: 6500,
+    category: "Furniture",
+    image: "https://images.unsplash.com/photo-1499933374294-4584851497cc?w=600"
+  },
+  {
+    id: 21,
+    name: "Electric Blender",
+    price: 2500,
+    category: "Home Appliances",
+    image: "https://images.unsplash.com/photo-1570222094114-d054a817e56b?w=600"
+  },
+  {
+    id: 22,
+    name: "Coffee Maker",
+    price: 5500,
+    category: "Home Appliances",
+    image: "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=600"
+  },
+  {
+    id: 23,
+    name: "Refrigerator",
+    price: 32000,
+    category: "Home Appliances",
+    image: "https://images.unsplash.com/photo-1571175443880-49e1d25b2bc5?w=600"
+  },
+  {
+    id: 24,
+    name: "Indoor Plant",
+    price: 599,
+    category: "Home Decor",
+    image: "https://images.unsplash.com/photo-1485955900006-10f4d324d411?w=600"
+  },
+  {
+    id: 25,
+    name: "Programming Book",
+    price: 650,
+    category: "Books",
+    image: "https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=600"
+  },
+  {
+    id: 26,
+    name: "Football",
+    price: 1200,
+    category: "Sports",
+    image: "https://images.unsplash.com/photo-1579952363873-27f3bade9f55?w=600"
+  },
+  {
+    id: 27,
+    name: "Mountain Bicycle",
+    price: 12000,
+    category: "Sports",
+    image: "https://images.unsplash.com/photo-1485965120184-e220f721d03e?w=600"
+  },
+  {
+    id: 28,
+    name: "Perfume",
+    price: 1800,
+    category: "Fashion",
+    image: "https://images.unsplash.com/photo-1541643600914-78b084683601?w=600"
+  },
+  {
+    id: 29,
+    name: "Travel Suitcase",
+    price: 3500,
+    category: "Accessories",
+    image: "https://images.unsplash.com/photo-1565026057447-bc90a3dceb87?w=600"
+  },
+  {
+    id: 30,
+    name: "Wireless Earbuds",
+    price: 2200,
+    category: "Electronics",
+    image: "https://images.unsplash.com/photo-1606220945770-b5b6c2c55bf1?w=600"
   }
 ];
 
