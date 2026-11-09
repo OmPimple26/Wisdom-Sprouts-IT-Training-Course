@@ -1,29 +1,32 @@
 import React from "react";
 import ProductCard from "../components/ProductCard";
 
-function Products({ products, onDelete, onAddToCart }) {
+function Products({ products, onDelete}) {
   return (
     <div className="page">
-
       <h1>All Products</h1>
 
-      <div className="product-container">
+      {products.length === 0 ? (
+        <div className="empty-message">
+          <div className="empty-icon">🛍️</div>
 
-        {products.map((product) => (
-          <ProductCard
-            key={product.id}
-            product={product}
-            onDelete={onDelete}
-            onAddToCart={onAddToCart}
-          />
-        ))}
+          <h2>No Products Available!</h2>
 
-      </div>
+          <p>Oops! It looks like there are no products available right now.</p>
 
-      {products.length === 0 && (
-        <p>No products available.</p>
+          <p>Why not add some exciting products to your store?</p>
+        </div>
+      ) : (
+        <div className="product-container">
+          {products.map((product) => (
+            <ProductCard
+              key={product.id}
+              product={product}
+              onDelete={onDelete}
+            />
+          ))}
+        </div>
       )}
-
     </div>
   );
 }

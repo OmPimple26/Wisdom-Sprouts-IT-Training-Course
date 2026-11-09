@@ -6,7 +6,6 @@ import Footer from "./components/Footer";
 import Home from "./pages/Home";
 import Products from "./pages/Products";
 
-
 import "./App.css";
 
 function App() {
@@ -24,12 +23,8 @@ function App() {
       <Navbar />
 
       <Routes>
-        <Route path="/" element={<Home products={products} />} />
-
-        <Route
-          path="/products"
-          element={<Products products={products} onDelete={deleteProduct} />}
-        />
+        <Route path="/" element={<Home products={productsData.slice(0, 3)} />}/>
+        <Route path="/products" element={<Products products={products} onDelete={deleteProduct} />}/>
       </Routes>
 
       <Footer />
