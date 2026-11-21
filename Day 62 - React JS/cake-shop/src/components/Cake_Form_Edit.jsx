@@ -13,7 +13,7 @@ function Cake_Form_Edit({ getData, handleCloseEdit, id }) {
 
   async function getDataaaaaa() {
     const res = await axios.get(
-      `https://6afc5fe6892984c4494b80e4.mockapi.io/flower_shop/${id}`,
+      `https://6afc5fe6892984c4494b80e4.mockapi.io/cakes/${id}`,
     );
 
     setName(res.data.name);
@@ -29,7 +29,7 @@ function Cake_Form_Edit({ getData, handleCloseEdit, id }) {
     e.preventDefault();
 
     await axios.put(
-      `https://6afc5fe6892984c4494b80e4.mockapi.io/flower_shop/${id}`,
+      `https://6afc5fe6892984c4494b80e4.mockapi.io/cakes/${id}`,
       { name: name, image: image, price: price },
     );
 

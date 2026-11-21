@@ -29,7 +29,7 @@ function App() {
 
   async function getData() {
     const res = await axios.get(
-      "https://6afc5fe6892984c4494b80e4.mockapi.io/flower_shop",
+      "https://6afc5fe6892984c4494b80e4.mockapi.io/cakes",
     );
 
     setState(res.data);
@@ -42,7 +42,7 @@ function App() {
   // Delete function
   async function deleteCake(id) {
     await axios.delete(
-      `https://6afc5fe6892984c4494b80e4.mockapi.io/flower_shop/${id}`,
+      `https://6afc5fe6892984c4494b80e4.mockapi.io/cakes/${id}`,
     );
 
     toast.error("Cake has been deleted successfully...");

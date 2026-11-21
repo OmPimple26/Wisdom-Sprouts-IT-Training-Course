@@ -13,7 +13,7 @@ function Cake_Form({ getData, handleClose }) {
     e.preventDefault();
 
     await axios.post(
-      "https://6afc5fe6892984c4494b80e4.mockapi.io/flower_shop",
+      "https://6afc5fe6892984c4494b80e4.mockapi.io/cakes",
       { name: name, image: image, price: price },
     );
 
