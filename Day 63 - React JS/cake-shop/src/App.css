@@ -1,4 +1,4 @@
-*{
+/* *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -17,4 +17,264 @@
   text-align: center;
   text-decoration: underline;
   margin: 1.2rem 0;
+} */
+
+
+/* Global CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: linear-gradient(135deg, #fff1e6, #ffe0cc, #fff8f2);
+  background-attachment: fixed;
+  color: #333;
+  min-height: 100vh;
+}
+
+/* Heading */
+.heading {
+  text-align: center;
+  text-decoration: underline;
+  margin: 30px 0;
+  color: #8b3a3a;
+  font-size: 32px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+/* Add Button */
+body > #root > button {
+  margin: 0 0 25px 50px !important;
+  padding: 10px 25px !important;
+  background: #ff8c42 !important;
+  color: white;
+  border: none !important;
+  border-radius: 8px !important;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+body > #root > button:hover {
+  background: #e76f24 !important;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Cards Wrapper */
+#wrapper {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto 40px;
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  flex-wrap: wrap;
+  gap: 25px;
+}
+
+/* Individual Cake Cards */
+#wrapper .card {
+  width: 18rem;
+  height: 25rem;
+  overflow: hidden;
+  border: none;
+  border-radius: 15px;
+  background: white;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+  transition: all 0.3s ease;
+}
+
+#wrapper .card:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.18);
+}
+
+/* Cake Image */
+#wrapper .card-img-top {
+  height: 65%;
+  object-fit: cover;
+}
+
+/* Card Body */
+#wrapper .card-body {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 15px;
+  background: #3b2525 !important;
+  border: none !important;
+}
+
+/* Cake Name */
+#wrapper .card-title {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #fff !important;
+}
+
+/* Cake Price */
+#wrapper .card-text {
+  color: #8ee6a0 !important;
+  font-size: 19px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+/* Card Buttons */
+#wrapper .card-body section {
+  width: 85% !important;
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+#wrapper .card-body .btn {
+  flex: 1;
+  padding: 7px 12px;
+  border-radius: 7px;
+  font-weight: 600;
+  transition: 0.2s ease;
+}
+
+#wrapper .card-body .btn:hover {
+  transform: scale(1.05);
+}
+
+/* Modal Styling */
+.modal-content {
+  border: none;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.modal-header {
+  background: #8b3a3a;
+  color: white;
+  padding: 18px 22px;
+}
+
+.modal-header .btn-close {
+  filter: brightness(0) invert(1);
+}
+
+.modal-title {
+  font-weight: 600;
+}
+
+.modal-body {
+  padding: 25px;
+  background: #fffaf6;
+}
+
+/* Form Styling */
+.modal-body .form-label {
+  font-weight: 600;
+  color: #553333;
+}
+
+.modal-body .form-control {
+  padding: 10px 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  transition: 0.2s ease;
+}
+
+.modal-body .form-control:focus {
+  border-color: #ff8c42;
+  box-shadow: 0 0 0 3px rgba(255, 140, 66, 0.15);
+}
+
+.modal-body .btn-primary {
+  background: #ff8c42;
+  border: none;
+  padding: 9px 25px;
+  border-radius: 7px;
+  font-weight: 600;
+}
+
+.modal-body .btn-primary:hover {
+  background: #e76f24;
+}
+
+/* Empty State Message */
+.empty-message {
+  width: 100%;
+  min-height: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.75);
+  border: 2px dashed #e6a47c;
+  border-radius: 15px;
+  padding: 30px 20px;
+  margin: 20px auto;
+}
+
+.empty-message h3 {
+  color: #8b3a3a;
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.empty-message p {
+  color: #765858;
+  font-size: 16px;
+  line-height: 1.7;
+  max-width: 500px;
+  margin-bottom: 0;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .empty-message h3 {
+    font-size: 22px;
+  }
+
+  .empty-message p {
+    font-size: 14px;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .heading {
+    font-size: 25px;
+    margin: 25px 10px;
+  }
+
+  body > #root > button {
+    margin-left: 5% !important;
+  }
+
+  #wrapper {
+    width: 95%;
+    justify-content: center;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .heading {
+    font-size: 22px;
+  }
+
+  #wrapper .card {
+    width: 100%;
+    max-width: 320px;
+  }
+
+  .modal-body {
+    padding: 18px;
+  }
 }

@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 import { toast, ToastContainer } from "react-toastify";
 import Modal from "react-bootstrap/Modal";
 import Cake_Form from "./components/Card_Form";
-import Cake_Form_Edit from './components/Cake_Form_Edit';
+import Cake_Form_Edit from "./components/Cake_Form_Edit";
 
 function App() {
   // ADD_Cake
@@ -71,9 +71,26 @@ function App() {
       </button>
 
       <section id="wrapper">
-        {state.map((c) => {
-          return <Cardex key={c.id} {...c} deleteCake={deleteCake} handleShowEdit={handleShowEdit}/>;
-        })}
+        {state.length > 0 ? (
+          state.map((c) => {
+            return (
+              <Cardex
+                key={c.id}
+                {...c}
+                deleteCake={deleteCake}
+                handleShowEdit={handleShowEdit}
+              />
+            );
+          })
+        ) : (
+          <div className="empty-message">
+            <h3>🍰 No Cakes Available!</h3>
+            <p>
+              Our cake collection is currently empty. Click the{" "}
+              <strong>Add</strong> button to add your first delicious cake!
+            </p>
+          </div>
+        )}
       </section>
 
       <ToastContainer />
@@ -89,12 +106,16 @@ function App() {
       </Modal>
 
       {/* Edit Modal */}
-        <Modal show={showEdit} onHide={handleCloseEdit}>
+      <Modal show={showEdit} onHide={handleCloseEdit}>
         <Modal.Header closeButton>
           <Modal.Title>Edit Cake</Modal.Title>
         </Modal.Header>
         <Modal.Body>
-           <Cake_Form_Edit id={id} getData={getData} handleCloseEdit={handleCloseEdit} />
+          <Cake_Form_Edit
+            id={id}
+            getData={getData}
+            handleCloseEdit={handleCloseEdit}
+          />
         </Modal.Body>
       </Modal>
     </>
