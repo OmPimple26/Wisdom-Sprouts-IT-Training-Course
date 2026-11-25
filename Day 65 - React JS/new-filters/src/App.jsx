@@ -48,6 +48,8 @@ import axios from "axios";
 import "./App.css";
 import ProductList from "./components/ProductList";
 import CircularLoader from "./components/CircularLoader";
+import Navbar from './components/Navbar'
+import Footer from './components/Footer'
 
 function App() {
   const [products, setProducts] = useState([]);
@@ -73,6 +75,8 @@ function App() {
 
   return (
     <>
+      <Navbar/>
+
       {loading ? (
         <CircularLoader />
       ) : error ? (
@@ -80,6 +84,8 @@ function App() {
       ) : (
         <ProductList products={products} />
       )}
+
+      <Footer/>
     </>
   );
 }
