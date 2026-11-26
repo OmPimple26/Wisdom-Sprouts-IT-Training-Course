@@ -42,6 +42,7 @@
 
 // export default App
 
+
 import { useState, useEffect } from "react";
 import axios from "axios";
 import "./App.css";
@@ -92,16 +93,11 @@ function App() {
 
   return (
     <>
-      <div style={{ width: "96%", margin: "auto" }}>
-        <Navbar />
+      <Navbar />
 
+      <div style={{ width: "96%", margin: "auto" }}>
         <section className="filters">
-          <input
-            type="text"
-            placeholder="Search products..."
-            value={search}
-            onChange={(e) => setSearch(e.target.value)}
-          />
+          <input type="text" placeholder="Search products..." value={search} onChange={(e) => setSearch(e.target.value)}/>
 
           <select value={sort} onChange={(e) => setSort(e.target.value)}>
             <option value="">Sort By</option>
@@ -111,53 +107,19 @@ function App() {
         </section>
 
         <section className="category-filters">
-          <button
-            onClick={() => {
-              setCategory("All");
-            }}
-          >
-            All
-          </button>{" "}
-          <button
-            onClick={() => {
-              setCategory("men's clothing");
-            }}
-          >
-            Men
-          </button>{" "}
-          <button
-            onClick={() => {
-              setCategory("women's clothing");
-            }}
-          >
-            Women
-          </button>{" "}
-          <button
-            onClick={() => {
-              setCategory("electronics");
-            }}
-          >
-            Electronics
-          </button>{" "}
-          <button
-            onClick={() => {
-              setCategory("jewelery");
-            }}
-          >
-            Jwellery
-          </button>
+          <button onClick={() => {setCategory("All");}}>All</button>{" "}
+          <button onClick={() => {setCategory("men's clothing");}}>Men</button>{" "}
+          <button onClick={() => {setCategory("women's clothing");}}>Women</button>{" "}
+          <button onClick={() => {setCategory("electronics");}}>Electronics</button>{" "}
+          <button onClick={() => {setCategory("jewelery");}}>Jwellery</button>
         </section>
 
-        {loading ? (
-          <CircularLoader />
-        ) : error ? (
-          <h2 className="message">{error}</h2>
-        ) : (
-          <ProductList products={filteredProducts} />
-        )}
-
-        <Footer />
+        {
+          loading ? (<CircularLoader/>) : error ? (<h2 className="message">{error}</h2>) : (<ProductList products={filteredProducts}/>)
+        }
       </div>
+
+      <Footer />
     </>
   );
 }

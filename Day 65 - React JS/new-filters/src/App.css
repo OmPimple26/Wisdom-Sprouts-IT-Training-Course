@@ -438,3 +438,155 @@ body {
     font-size: 19px;
   }
 }
+
+
+/* ============================= */
+/* SEARCH & SORT FILTERS */
+/* ============================= */
+
+.filters {
+  max-width: 1400px;
+  margin: 30px auto 20px;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Search Input */
+.filters input {
+  flex: 1;
+  max-width: 600px;
+  padding: 13px 18px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  outline: none;
+  font-size: 15px;
+  background: #ffffff;
+  color: #333;
+  transition: all 0.3s ease;
+}
+
+.filters input:focus {
+  border-color: #4f46e5;
+  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.12);
+}
+
+.filters input::placeholder {
+  color: #999;
+}
+
+/* Sort Dropdown */
+.filters select {
+  width: 220px;
+  padding: 13px 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  outline: none;
+  background-color: #ffffff;
+  color: #444;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.filters select:focus {
+  border-color: #4f46e5;
+  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.12);
+}
+
+
+/* ============================= */
+/* CATEGORY FILTERS */
+/* ============================= */
+
+.category-filters {
+  max-width: 1400px;
+  margin: 20px auto 30px;
+  padding: 0 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+/* Category Buttons */
+.category-filters button {
+  padding: 10px 22px;
+  border: 1px solid #4f46e5;
+  border-radius: 25px;
+  background-color: #ffffff;
+  color: #4f46e5;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* Hover Effect */
+.category-filters button:hover {
+  background: linear-gradient(135deg, #4f46e5, #7c3aed);
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(79, 70, 229, 0.2);
+}
+
+/* ============================= */
+/* RESPONSIVE DESIGN */
+/* ============================= */
+
+/* Tablet */
+@media (max-width: 768px) {
+  .filters {
+    gap: 12px;
+    padding: 0 15px;
+  }
+
+  .filters input {
+    max-width: none;
+    min-width: 0;
+  }
+
+  .filters select {
+    width: 190px;
+  }
+
+  .category-filters {
+    gap: 10px;
+  }
+
+  .category-filters button {
+    padding: 9px 17px;
+    font-size: 13px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .filters {
+    flex-direction: column;
+    align-items: stretch;
+    margin-top: 20px;
+  }
+
+  .filters input,
+  .filters select {
+    width: 100%;
+    max-width: none;
+    padding: 12px 14px;
+  }
+
+  .category-filters {
+    justify-content: flex-start;
+    gap: 8px;
+    padding: 0 15px;
+    margin-top: 15px;
+  }
+
+  .category-filters button {
+    padding: 9px 15px;
+    font-size: 12px;
+  }
+}
