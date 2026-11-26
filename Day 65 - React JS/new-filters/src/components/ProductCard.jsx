@@ -1,4 +1,5 @@
 import React from 'react'
+import { ToastContainer, toast } from 'react-toastify';
 
 const ProductCard = ({product}) => {
   return (
@@ -23,9 +24,10 @@ const ProductCard = ({product}) => {
 
             <div className="product-bottom">
                 <h2>${product.price.toFixed(2)}</h2>
-                <button onClick={()=>alert(`Added ${product.title} to cart!`)}>Add to Cart</button>
+                <button onClick={()=>toast.success(`Added ${product.title} to cart!`)}>Add to Cart</button>
             </div>
         </div>
+        <ToastContainer/>
     </div>
   )
 }

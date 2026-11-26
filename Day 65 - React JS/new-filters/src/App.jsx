@@ -55,6 +55,8 @@ function App() {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
+  const [search, setSearch] = useState("");
+  const [sort, setSort] = useState("");
 
   const fetchProducts = async () => {
     try {
@@ -73,6 +75,18 @@ function App() {
     fetchProducts();
   }, []);
 
+  let filteredProducts = products.filter((product)=>{
+    const matchesSearch = product.title.toLowerCase().includes(search.toLowerCase());
+    return matchesSearch;
+  })
+
+  // Sort products by price
+  if(sort==="low"){
+    filteredProducts.sort((a,b) => a.price - b.price);
+  }else if(sort==="high"){
+    filteredProducts.sort((a,b) => b.price - a.price);
+  }
+
   return (
     <>
       <Navbar/>
@@ -82,7 +96,7 @@ function App() {
       ) : error ? (
         <h2 className="message">{error}</h2>
       ) : (
-        <ProductList products={products} />
+        <ProductList products={products} filteredProducts={filteredProducts}/>
       )}
 
       <Footer/>
